@@ -3,6 +3,7 @@ package dev.adamko.gildedrose
 import com.gildedrose.GildedRose
 import com.gildedrose.Item
 import dev.adamko.gildedrose.testdata.ItemGens
+import io.kotest.assertions.withClue
 import io.kotest.core.spec.style.BehaviorSpec
 import io.kotest.matchers.comparables.shouldBeEqualComparingTo
 import io.kotest.matchers.ints.shouldBeExactly
@@ -20,20 +21,29 @@ class UpdateQualityTest : BehaviorSpec({
           result.name shouldBeEqualComparingTo inputName
         }
       }
+      Then("sellIn should change by -1") {
+        checkAllItems(ItemGens.Names.all, ItemGens.SellIn.any, ItemGens.Quality.any) {
+          result.sellIn shouldBeExactly (inputSellIn - 1)
+        }
+      }
     }
   }
 
   Given("any non-legendary item") {
     val nonLegendaryItemName = ItemGens.Names.nonLegendary
-    When("quality is updated") {
-      Then("quality should be in range 0..50") {
-        checkAllItems(nonLegendaryItemName, ItemGens.SellIn.any, ItemGens.Quality.any) {
-          result.quality shouldBeInRange 0..50
-        }
-      }
-      Then("sellIn should change by -1") {
-        checkAllItems(nonLegendaryItemName, ItemGens.SellIn.any, ItemGens.Quality.any) {
-          result.sellIn shouldBeExactly (inputSellIn - 1)
+
+    listOf(
+        "initial quality is inside valid range, 0..50" to ItemGens.Quality.regular,
+        // TODO add validation/handling of items outside of valid range
+//        "initial quality is outside of valid range, 0..50" to ItemGens.Quality.invalid(0..50),
+    ).forEach { (desc, qualityGen) ->
+      And(desc) {
+        When("quality is updated") {
+          Then("quality should be in range 0..50") {
+            checkAllItems(nonLegendaryItemName, ItemGens.SellIn.any, qualityGen) {
+              result.quality shouldBeInRange 0..50
+            }
+          }
         }
       }
     }
@@ -41,10 +51,18 @@ class UpdateQualityTest : BehaviorSpec({
 
   Given("any legendary item") {
     val legendaryItemName = ItemGens.Names.legendary
-    When("quality is updated") {
-      Then("quality should be 80") {
-        checkAllItems(legendaryItemName, ItemGens.SellIn.any, ItemGens.Quality.any) {
-          result.quality shouldBeExactly 80
+    listOf(
+        "initial quality is valid (80)" to listOf(80).exhaustive(),
+        // TODO add validation/handling of items outside of valid range
+//        "initial quality is invalid, (is not 80)" to Arb.int().filterNot { it == 80 },
+    ).forEach { (desc, qualityGen) ->
+      And(desc) {
+        When("quality is updated") {
+          Then("quality should be 80") {
+            checkAllItems(legendaryItemName, ItemGens.SellIn.any, qualityGen) {
+              result.quality shouldBeExactly 80
+            }
+          }
         }
       }
     }
@@ -151,7 +169,21 @@ class UpdateQualityTest : BehaviorSpec({
           repetitionsGen,
       ) { inputName: String, inputSellIn: Int, inputQuality: Int, inputRepetitions: Int ->
         val result = createAndUpdateItem(inputName, inputSellIn, inputQuality, inputRepetitions)
-        AssertItemContext(inputName, inputSellIn, inputQuality, inputRepetitions, result).assert()
+        withClue(
+            """
+              
+              inputs:
+                name: $inputName
+                sellIn: $inputSellIn
+                quality: $inputQuality
+                repetitions: $inputRepetitions
+              output:
+                item: $result
+              
+            """.trimIndent()
+        ) {
+          AssertItemContext(inputName, inputSellIn, inputQuality, inputRepetitions, result).assert()
+        }
       }
     }
 

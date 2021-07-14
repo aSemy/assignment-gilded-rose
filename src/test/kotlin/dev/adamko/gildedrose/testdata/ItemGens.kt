@@ -5,6 +5,7 @@ import dev.adamko.config.KotestExtensions.mergeAll
 import io.kotest.property.Arb
 import io.kotest.property.Gen
 import io.kotest.property.arbitrary.bind
+import io.kotest.property.arbitrary.filterNot
 import io.kotest.property.arbitrary.int
 import io.kotest.property.arbitrary.map
 import io.kotest.property.arbitrary.string
@@ -42,6 +43,7 @@ object ItemGens {
     val regular = Arb.int(regularValidRange)
 
     val any = Arb.int(Int.MIN_VALUE + 1 until Int.MAX_VALUE)
+    fun invalid(rangeToExclude: IntRange) = any.filterNot { it in rangeToExclude }
 
   }
 
