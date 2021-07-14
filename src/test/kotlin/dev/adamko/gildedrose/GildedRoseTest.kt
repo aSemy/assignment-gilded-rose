@@ -5,13 +5,19 @@ import com.gildedrose.Item
 import dev.adamko.gildedrose.testdata.ItemGens
 import io.kotest.assertions.withClue
 import io.kotest.core.spec.style.BehaviorSpec
+import io.kotest.inspectors.forAll
+import io.kotest.inspectors.forAtLeastOne
+import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.comparables.shouldBeEqualComparingTo
 import io.kotest.matchers.ints.shouldBeExactly
 import io.kotest.matchers.ints.shouldBeInRange
+import io.kotest.matchers.should
 import io.kotest.property.Arb
 import io.kotest.property.Gen
 import io.kotest.property.arbitrary.filter
 import io.kotest.property.arbitrary.int
+import io.kotest.property.arbitrary.map
+import io.kotest.property.arbitrary.set
 import io.kotest.property.arbitrary.withEdgecases
 import io.kotest.property.checkAll
 import io.kotest.property.exhaustive.exhaustive
@@ -28,6 +34,90 @@ class UpdateQualityTest : BehaviorSpec({
       Then("sellIn should change by -1") {
         checkAllItems(ItemGens.Names.all, ItemGens.SellIn.any, ItemGens.Quality.any) {
           result.sellIn shouldBeExactly (inputSellIn - 1)
+        }
+      }
+    }
+  }
+
+  Given("multiple items") {
+    // TODO test non-regular qualities
+    val itemArb = ItemGens.Binds.itemArb(qualityGen = ItemGens.Quality.regular)
+
+    And("items are unique") {
+      val uniqueItems = Arb.set(itemArb, 0..10).map { it.toTypedArray() }
+      Then("expect each sellIn changes by -1 for each item") {
+        checkAll(uniqueItems) { inputItems ->
+
+          val expectedItems = inputItems.map {
+            object {
+              val expectedHash = it.hashCode()
+              val expectedName = it.name
+              val expectedSellIn = it.sellIn - 1
+            }
+          }
+
+          GildedRose(inputItems).updateQuality()
+
+          withClue("inputItems.size") {
+            inputItems shouldHaveSize expectedItems.size
+          }
+
+          expectedItems.forEach { expectedItem ->
+            withClue(
+              """
+            
+                Expect input item with
+                  hash: ${expectedItem.expectedHash}
+                  name: ${expectedItem.expectedName}
+                  sellIn: ${expectedItem.expectedSellIn}
+                is in output
+                
+                expectedItems.size: ${expectedItems.size}
+                inputItems.size: ${inputItems.size}
+                  
+              """.trimIndent()
+            ) {
+              inputItems.forAtLeastOne { resultItem ->
+
+                resultItem should {
+                  withClue("hash") {
+                    it.hashCode() shouldBeEqualComparingTo expectedItem.expectedHash
+                  }
+                  withClue("name") {
+                    it.name shouldBeEqualComparingTo expectedItem.expectedName
+                  }
+                  withClue("sellIn") {
+                    it.sellIn shouldBeExactly expectedItem.expectedSellIn
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    And("items are duplicated") {
+      Then("expect sellIn decreases by -1 * number of duplicates") {
+        checkAll(Arb.int(2..10), itemArb) { numOfItems, inputItem ->
+          val expectedHash = inputItem.hashCode()
+          val expectedName = inputItem.name
+          val expectedSellIn = inputItem.sellIn - numOfItems
+
+          val inputItems = Array(numOfItems) { inputItem }
+
+          GildedRose(inputItems).updateQuality()
+
+          withClue("expect same number of items after update") {
+            inputItems shouldHaveSize numOfItems
+          }
+          inputItems.forAll { resultingItem ->
+            resultingItem should {
+              it.hashCode() shouldBeEqualComparingTo expectedHash
+              it.name shouldBeEqualComparingTo expectedName
+              it.sellIn shouldBeEqualComparingTo expectedSellIn
+            }
+          }
         }
       }
     }

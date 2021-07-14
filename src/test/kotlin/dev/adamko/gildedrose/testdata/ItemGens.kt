@@ -16,8 +16,8 @@ object ItemGens {
 
   object Names {
     val regular = Arb.string().withEdgecases(
-        "+5 Dexterity Vest",
-        "Elixir of the Mongoose",
+      "+5 Dexterity Vest",
+      "Elixir of the Mongoose",
     )
     val aged = listOf("Aged Brie").exhaustive()
     val tickets = listOf("Backstage passes to a TAFKAL80ETC concert").exhaustive()
@@ -42,6 +42,7 @@ object ItemGens {
 
     val regular = Arb.int(regularValidRange)
 
+    // note- ignore integer overflow for now
     val any = Arb.int(Int.MIN_VALUE + 1 until Int.MAX_VALUE)
     fun invalid(rangeToExclude: IntRange) = any.filterNot { it in rangeToExclude }
 
@@ -49,12 +50,13 @@ object ItemGens {
 
   object Binds {
     fun itemArb(
-        nameGen: Gen<String> = Names.all,
-        sellInGen: Gen<Int> = SellIn.any,
-        qualityGen: Gen<Int> = Quality.any,
-    ) = Arb.bind(nameGen, sellInGen, qualityGen) { name, sellIn, quality ->
-      Item(name, sellIn, quality)
-    }
+      nameGen: Gen<String> = Names.all,
+      sellInGen: Gen<Int> = SellIn.any,
+      qualityGen: Gen<Int> = Quality.any,
+    ) =
+      Arb.bind(nameGen, sellInGen, qualityGen) { name, sellIn, quality ->
+        Item(name, sellIn, quality)
+      }
   }
 
 }
