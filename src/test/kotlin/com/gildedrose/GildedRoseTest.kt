@@ -1,17 +1,18 @@
 package com.gildedrose
 
-import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.Test
+import io.kotest.core.spec.style.AnnotationSpec
+import io.kotest.matchers.comparables.shouldBeEqualComparingTo
 
-internal class GildedRoseTest {
+class GildedRoseTest : AnnotationSpec() {
 
   @Test
-  fun foo() {
-    val items = arrayOf<Item>(Item("foo", 0, 0))
+  fun `expect name is unaffected by updateQuality()`() {
+    val inputName = "foo"
+
+    val items = arrayOf(Item("foo", 0, 0))
     val app = GildedRose(items)
     app.updateQuality()
-    assertEquals("fixme", app.items[0].name)
-
+    app.items[0].name shouldBeEqualComparingTo inputName
   }
 
 }
