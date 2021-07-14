@@ -1,6 +1,4 @@
-
-
 ### Undocumented behaviour
 
-`updateItems` ignores Items with qualities outside their expected ranges.
+`updateItems` doesn't validate/force quality to be in the expected range.
 
