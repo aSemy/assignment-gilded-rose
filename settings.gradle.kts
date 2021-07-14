@@ -25,6 +25,7 @@ dependencyResolutionManagement {
       kotlin("plugin.serialization") version kotlinVersion
 
       id("dev.jacomet.logging-capabilities") version "0.9.0"
+      id("info.solidsoft.pitest") version "1.6.0"
     }
 
     repositories {
