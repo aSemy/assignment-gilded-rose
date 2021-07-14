@@ -12,6 +12,7 @@ import io.kotest.property.Arb
 import io.kotest.property.Gen
 import io.kotest.property.arbitrary.filter
 import io.kotest.property.arbitrary.int
+import io.kotest.property.arbitrary.withEdgecases
 import io.kotest.property.checkAll
 import io.kotest.property.exhaustive.exhaustive
 
@@ -136,8 +137,10 @@ class UpdateQualityTest : BehaviorSpec({
   Given("a ticket item") {
     val ticketName = ItemGens.Names.tickets
     When("quality is updated") {
+
+      // "'Backstage passes', like aged brie, increases in Quality as its SellIn value approaches"
       And("sellIn is 11 or greater") {
-        val sellInGreaterThan10 = ItemGens.SellIn.any.filter { it > 10 }
+        val sellInGreaterThan10 = Arb.int().filter { it > 10 }.withEdgecases(11)
         Then("quality should change by +1") {
           checkAllItems(ticketName, sellInGreaterThan10, validRegularQualityArb) {
             val expectedQuality = (inputQuality + 1).coerceIn(ItemGens.Quality.regularValidRange)
@@ -147,7 +150,7 @@ class UpdateQualityTest : BehaviorSpec({
       }
       // "Quality increases by 2 when there are 10 days or less"
       And("sellIn is between 6 and 10") {
-        val sellInBetween5And10 = Arb.int(6..10)
+        val sellInBetween5And10 = (6..10).toList().exhaustive()
         Then("quality should change by +2") {
           checkAllItems(ticketName, sellInBetween5And10, validRegularQualityArb) {
             val expectedQuality = (inputQuality + 2).coerceIn(ItemGens.Quality.regularValidRange)
@@ -157,7 +160,7 @@ class UpdateQualityTest : BehaviorSpec({
       }
       // "and by 3 when there are 5 days or less"
       And("sellIn is between 1 and 5") {
-        val sellInBetween1And4 = Arb.int(1..5)
+        val sellInBetween1And4 = (1..5).toList().exhaustive()
         Then("quality should change by +3") {
           checkAllItems(ticketName, sellInBetween1And4, validRegularQualityArb) {
             val expectedQuality = (inputQuality + 3).coerceIn(ItemGens.Quality.regularValidRange)
