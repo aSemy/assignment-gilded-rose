@@ -1,0 +1,68 @@
+# @formatter:off
+[versions]
+
+jvm    = "11"
+kotlin = "1.5.21"
+
+kotest = "4.6.1"
+slf4j  = "2.0.0-alpha1"
+
+####################################################################################################
+
+[libraries]
+
+#################
+##   Kotlin    ##
+#################
+
+kotlin-bom         = { group = "org.jetbrains.kotlin",  name = "kotlin-bom",                 version.ref = "kotlin" }
+kotlin-annotations = { group = "org.jetbrains",         name = "annotations" }
+
+kotlinx-serde      = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version = "1.2.1" }
+kotlinx-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core",    version = "1.5.0" }
+kotlinx-html       = { group = "org.jetbrains.kotlinx", name = "kotlinx-html-jvm",           version = "0.7.3" }
+
+#################
+##   Logging   ##
+#################
+
+logging-slf4j-api      = { group = "org.slf4j",            name = "slf4j-api",       version.ref = "slf4j"  }
+logging-slf4j-logback  = { group = "ch.qos.logback",       name = "logback-classic", version     = "1.3.0-alpha5"  }
+logging-kotlinLogging  = { group = "io.github.microutils", name = "kotlin-logging",  version     = "1.12.5" }
+
+#################
+##   Testing   ##
+#################
+
+mockk = { module = "io.mockk:mockk", version = "1.11.0" }
+
+kotest-runner     = { group = "io.kotest",            name = "kotest-runner-junit5",           version.ref = "kotest" }
+kotest-core       = { group = "io.kotest",            name = "kotest-assertions-core",         version.ref = "kotest" }
+kotest-prop       = { group = "io.kotest",            name = "kotest-property",                version.ref = "kotest" }
+kotest-json       = { group = "io.kotest",            name = "kotest-assertions-json",         version.ref = "kotest" }
+kotest-datatest   = { group = "io.kotest",            name = "kotest-framework-datatest",      version.ref = "kotest" }
+kotest-junitxml   = { group = "io.kotest",            name = "kotest-extensions-junitxml",     version.ref = "kotest" }
+kotest-htmlreport = { group = "io.kotest",            name = "kotest-extensions-htmlreporter", version.ref = "kotest" }
+
+kotest-pitest   = { group = "io.kotest.extensions", name = "kotest-extensions-pitest",       version = "1.0.1" }
+
+####################################################################################################
+
+[bundles]
+
+logging = [
+  "logging-slf4j-api",
+  "logging-slf4j-logback",
+  "logging-kotlinLogging",
+]
+
+test-kotest = [
+  "kotest-runner",
+  "kotest-core",
+  "kotest-prop",
+  "kotest-json",
+  "kotest-pitest",
+  "kotest-datatest",
+  "kotest-junitxml",
+  "kotest-htmlreport",
+]
