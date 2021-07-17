@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>ItemTemplateProvider.kt</h1>
+
+<table class="src">
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_1'/>
+      1
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_1'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''>package dev.adamko.gildedrose.item</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_2'/>
+      2
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_2'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''></span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_3'/>
+      3
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_3'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''></span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_4'/>
+      4
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_4'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''>/**</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_5'/>
+      5
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_5'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''> * Provides an [ItemTemplate] for a given [ItemState].</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_6'/>
+      6
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_6'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''> */</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_7'/>
+      7
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_7'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''>fun interface ItemTemplateProvider {</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_8'/>
+      8
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_8'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''></span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_9'/>
+      9
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_9'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''>  fun getTemplate(item: ItemState): ItemTemplate</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_10'/>
+      10
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_10'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''></span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='covered'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_11'/>
+      11
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_11'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class='covered'>
+      <pre><span class=''>  companion object {</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_12'/>
+      12
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_12'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''></span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='covered'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_13'/>
+      13
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_13'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class='covered'>
+      <pre><span class=''>    val defaultTemplateProvider = ItemTemplateProvider {</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='covered'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_14'/>
+      14
+    </td>
+    <td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_14'>1</a>
+<span>
+
+1. defaultTemplateProvider$lambda-1 : replaced return value with null for dev/adamko/gildedrose/item/ItemTemplateProvider$Companion::defaultTemplateProvider$lambda-1 &rarr; KILLED<br/>
+
+</span>
+</span>
+    </td>
+    <td class='covered'>
+      <pre><span class='killed'>      it.name.run {</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='covered'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_15'/>
+      15
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_15'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class='covered'>
+      <pre><span class=''>        when {</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_16'/>
+      16
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_16'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''>          // conjured</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='covered'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_17'/>
+      17
+    </td>
+    <td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_17'>2</a>
+<span>
+
+1. defaultTemplateProvider$lambda-1 : negated conditional &rarr; KILLED<br/>
+
+2. defaultTemplateProvider$lambda-1 : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+
+</span>
+</span>
+    </td>
+    <td class='covered'>
+      <pre><span class='killed'>          startsWith(&#34;Conjured&#34;)                              -&#62; ItemTemplates.conjuredItem</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_18'/>
+      18
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_18'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''>          // tickets</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='covered'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_19'/>
+      19
+    </td>
+    <td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_19'>2</a>
+<span>
+
+1. defaultTemplateProvider$lambda-1 : negated conditional &rarr; KILLED<br/>
+
+2. defaultTemplateProvider$lambda-1 : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+
+</span>
+</span>
+    </td>
+    <td class='covered'>
+      <pre><span class='killed'>          equals(&#34;Backstage passes to a TAFKAL80ETC concert&#34;) -&#62; ItemTemplates.ticketItem</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_20'/>
+      20
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_20'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''>          // legendary</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='covered'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_21'/>
+      21
+    </td>
+    <td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_21'>2</a>
+<span>
+
+1. defaultTemplateProvider$lambda-1 : negated conditional &rarr; KILLED<br/>
+
+2. defaultTemplateProvider$lambda-1 : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+
+</span>
+</span>
+    </td>
+    <td class='covered'>
+      <pre><span class='killed'>          equals(&#34;Sulfuras, Hand of Ragnaros&#34;)                -&#62; ItemTemplates.legendaryItem</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_22'/>
+      22
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_22'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''>          // aged</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='covered'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_23'/>
+      23
+    </td>
+    <td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_23'>2</a>
+<span>
+
+1. defaultTemplateProvider$lambda-1 : negated conditional &rarr; KILLED<br/>
+
+2. defaultTemplateProvider$lambda-1 : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+
+</span>
+</span>
+    </td>
+    <td class='covered'>
+      <pre><span class='killed'>          equals(&#34;Aged Brie&#34;)                                 -&#62; ItemTemplates.agedItem</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_24'/>
+      24
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_24'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''>          // regular</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='covered'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_25'/>
+      25
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_25'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class='covered'>
+      <pre><span class=''>          else                                                -&#62; ItemTemplates.regularItem</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_26'/>
+      26
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_26'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''>        }</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_27'/>
+      27
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_27'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''>      }</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_28'/>
+      28
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_28'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''>    }</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_29'/>
+      29
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_29'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''>  }</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@e8962ecd_30'/>
+      30
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_30'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''>}</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td></td>
+    <td></td>
+    <td><h2>Mutations</h2></td>
+  </tr>
+
+
+  <tr>
+    <td><a href='#org.pitest.mutationtest.report.html.SourceFile@e8962ecd_14'>14</a></td>
+    <td></td>
+    <td>
+
+      <a name='grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_14'/>
+
+      <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>defaultTemplateProvider$lambda-1<br/><b>Killed by : </b>dev.adamko.gildedrose.gildedrosetests.RegularItems.Given: a regular item When: quality is updated And: is NOT expired Then: quality should change by -1</span></span>
+        replaced return value with null for
+        dev/adamko/gildedrose/item/ItemTemplateProvider$Companion::defaultTemplateProvider$lambda-1
+        &rarr; KILLED</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td><a href='#org.pitest.mutationtest.report.html.SourceFile@e8962ecd_17'>17</a></td>
+    <td></td>
+    <td>
+
+      <a name='grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_17'/>
+
+      <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>defaultTemplateProvider$lambda-1<br/><b>Killed by : </b>dev.adamko.gildedrose.gildedrosetests.RegularItems.Given: a regular item When: quality is updated And: is NOT expired Then: quality should change by -1</span></span>
+        negated conditional &rarr; KILLED</p>
+      <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>defaultTemplateProvider$lambda-1<br/><b>Killed by : </b>dev.adamko.gildedrose.gildedrosetests.ConjuredItems.Given: a conjured item When: quality is updated And: is NOT expired Then: quality should change by -2</span></span>
+        removed conditional - replaced equality check with false &rarr; KILLED</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td><a href='#org.pitest.mutationtest.report.html.SourceFile@e8962ecd_19'>19</a></td>
+    <td></td>
+    <td>
+
+      <a name='grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_19'/>
+
+      <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>defaultTemplateProvider$lambda-1<br/><b>Killed by : </b>dev.adamko.gildedrose.gildedrosetests.RegularItems.Given: a regular item When: quality is updated And: is NOT expired Then: quality should change by -1</span></span>
+        negated conditional &rarr; KILLED</p>
+      <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>defaultTemplateProvider$lambda-1<br/><b>Killed by : </b>dev.adamko.gildedrose.gildedrosetests.TicketItems.Given: a ticket item When: quality is updated And: sellIn is 11 or greater Then: quality should change by +1</span></span>
+        removed conditional - replaced equality check with false &rarr; KILLED</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td><a href='#org.pitest.mutationtest.report.html.SourceFile@e8962ecd_21'>21</a></td>
+    <td></td>
+    <td>
+
+      <a name='grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_21'/>
+
+      <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>defaultTemplateProvider$lambda-1<br/><b>Killed by : </b>dev.adamko.gildedrose.gildedrosetests.RegularItems.Given: a regular item When: quality is updated And: is NOT expired Then: quality should change by -1</span></span>
+        negated conditional &rarr; KILLED</p>
+      <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>defaultTemplateProvider$lambda-1<br/><b>Killed by : </b>dev.adamko.gildedrose.gildedrosetests.LegendaryItems.Given: any legendary item And: initial quality is valid (80) When: quality is updated Then: quality should be 80</span></span>
+        removed conditional - replaced equality check with false &rarr; KILLED</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td><a href='#org.pitest.mutationtest.report.html.SourceFile@e8962ecd_23'>23</a></td>
+    <td></td>
+    <td>
+
+      <a name='grouporg.pitest.mutationtest.report.html.SourceFile@e8962ecd_23'/>
+
+      <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>defaultTemplateProvider$lambda-1<br/><b>Killed by : </b>dev.adamko.gildedrose.gildedrosetests.RegularItems.Given: a regular item When: quality is updated And: is NOT expired Then: quality should change by -1</span></span>
+        negated conditional &rarr; KILLED</p>
+      <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>defaultTemplateProvider$lambda-1<br/><b>Killed by : </b>dev.adamko.gildedrose.gildedrosetests.AgedItems.Given: an aged item When: quality is updated And: is NOT expired Then: quality should change by +1</span></span>
+        removed conditional - replaced equality check with false &rarr; KILLED</p>
+    </td>
+  </tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+
+  <li class='mutator'>BOOLEAN_FALSE_RETURN</li>
+
+  <li class='mutator'>BOOLEAN_TRUE_RETURN</li>
+
+  <li class='mutator'>CONDITIONALS_BOUNDARY_MUTATOR</li>
+
+  <li class='mutator'>EMPTY_RETURN_VALUES</li>
+
+  <li class='mutator'>EXPERIMENTAL_SWITCH_MUTATOR</li>
+
+  <li class='mutator'>INCREMENTS_MUTATOR</li>
+
+  <li class='mutator'>INVERT_NEGS_MUTATOR</li>
+
+  <li class='mutator'>MATH_MUTATOR</li>
+
+  <li class='mutator'>NEGATE_CONDITIONALS_MUTATOR</li>
+
+  <li class='mutator'>NULL_RETURN_VALUES</li>
+
+  <li class='mutator'>PRIMITIVE_RETURN_VALS_MUTATOR</li>
+
+  <li class='mutator'>REMOVE_CONDITIONALS_EQUAL_ELSE_MUTATOR</li>
+
+  <li class='mutator'>VOID_METHOD_CALL_MUTATOR</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+  <li>dev.adamko.gildedrose.gildedrosetests.MultipleItems. (25399 ms)</li>
+  <li>com.gildedrose.GildedRoseTest. (1694 ms)</li>
+  <li>dev.adamko.gildedrose.gildedrosetests.AgedItems. (234 ms)</li>
+  <li>dev.adamko.gildedrose.gildedrosetests.AnyItem. (545 ms)</li>
+  <li>dev.adamko.gildedrose.gildedrosetests.NonLegendaryItems. (89 ms)</li>
+  <li>dev.adamko.gildedrose.gildedrosetests.RegularItems. (78 ms)</li>
+  <li>dev.adamko.gildedrose.gildedrosetests.ConjuredItems. (116 ms)</li>
+  <li>dev.adamko.gildedrose.gildedrosetests.TicketItems. (151 ms)</li>
+  <li>dev.adamko.gildedrose.gildedrosetests.LegendaryItems. (146 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.6.3
+
+</body>
+</html>

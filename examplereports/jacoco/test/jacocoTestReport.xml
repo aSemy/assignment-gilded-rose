@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><!DOCTYPE report PUBLIC
+  "-//JACOCO//DTD Report 1.1//EN" "report.dtd">
+<report name="gilded-rose">
+  <sessioninfo id="DESKTOP-3SV77AF-795327ab" start="1626616499873" dump="1626616531023"/>
+  <package name="com/gildedrose">
+    <class name="com/gildedrose/GildedRose" sourcefilename="GildedRose.kt">
+      <method name="&lt;init&gt;"
+        desc="([Lcom/gildedrose/Item;Ldev/adamko/gildedrose/item/ItemTemplateProvider;)V" line="8">
+        <counter type="INSTRUCTION" missed="0" covered="15"/>
+        <counter type="LINE" missed="0" covered="3"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="&lt;init&gt;"
+        desc="([Lcom/gildedrose/Item;Ldev/adamko/gildedrose/item/ItemTemplateProvider;ILkotlin/jvm/internal/DefaultConstructorMarker;)V"
+        line="8">
+        <counter type="INSTRUCTION" missed="0" covered="11"/>
+        <counter type="LINE" missed="0" covered="3"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="getItems" desc="()[Lcom/gildedrose/Item;" line="9">
+        <counter type="INSTRUCTION" missed="0" covered="3"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="setItems" desc="([Lcom/gildedrose/Item;)V" line="9">
+        <counter type="INSTRUCTION" missed="7" covered="0"/>
+        <counter type="LINE" missed="1" covered="0"/>
+        <counter type="COMPLEXITY" missed="1" covered="0"/>
+        <counter type="METHOD" missed="1" covered="0"/>
+      </method>
+      <method name="getTemplate"
+        desc="(Ldev/adamko/gildedrose/item/ItemState;)Ldev/adamko/gildedrose/item/ItemTemplate;"
+        line="15">
+        <counter type="INSTRUCTION" missed="0" covered="5"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="updateQuality" desc="()V" line="20">
+        <counter type="INSTRUCTION" missed="0" covered="19"/>
+        <counter type="LINE" missed="0" covered="5"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="applyUpdate"
+        desc="(Lcom/gildedrose/Item;Ldev/adamko/gildedrose/item/ItemState;)V" line="27">
+        <counter type="INSTRUCTION" missed="0" covered="13"/>
+        <counter type="LINE" missed="0" covered="4"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="getUpdatedItem"
+        desc="(Ldev/adamko/gildedrose/item/ItemState;)Ldev/adamko/gildedrose/item/ItemState;"
+        line="33">
+        <counter type="INSTRUCTION" missed="0" covered="6"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <counter type="INSTRUCTION" missed="7" covered="72"/>
+      <counter type="LINE" missed="0" covered="15"/>
+      <counter type="COMPLEXITY" missed="1" covered="7"/>
+      <counter type="METHOD" missed="1" covered="7"/>
+      <counter type="CLASS" missed="0" covered="1"/>
+    </class>
+    <class name="com/gildedrose/Item" sourcefilename="Item.kt">
+      <method name="&lt;init&gt;" desc="(Ljava/lang/String;II)V" line="3">
+        <counter type="INSTRUCTION" missed="0" covered="15"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="getName" desc="()Ljava/lang/String;" line="3">
+        <counter type="INSTRUCTION" missed="0" covered="3"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="setName" desc="(Ljava/lang/String;)V" line="3">
+        <counter type="INSTRUCTION" missed="0" covered="7"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="getSellIn" desc="()I" line="3">
+        <counter type="INSTRUCTION" missed="0" covered="3"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="setSellIn" desc="(I)V" line="3">
+        <counter type="INSTRUCTION" missed="0" covered="4"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="getQuality" desc="()I" line="3">
+        <counter type="INSTRUCTION" missed="0" covered="3"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="setQuality" desc="(I)V" line="3">
+        <counter type="INSTRUCTION" missed="0" covered="4"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="toString" desc="()Ljava/lang/String;" line="5">
+        <counter type="INSTRUCTION" missed="0" covered="8"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <counter type="INSTRUCTION" missed="0" covered="47"/>
+      <counter type="LINE" missed="0" covered="2"/>
+      <counter type="COMPLEXITY" missed="0" covered="8"/>
+      <counter type="METHOD" missed="0" covered="8"/>
+      <counter type="CLASS" missed="0" covered="1"/>
+    </class>
+    <class name="com/gildedrose/ItemKt" sourcefilename="Item.kt">
+      <method name="isExpired" desc="(Lcom/gildedrose/Item;)Z" line="9">
+        <counter type="INSTRUCTION" missed="0" covered="10"/>
+        <counter type="BRANCH" missed="0" covered="2"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="2"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <counter type="INSTRUCTION" missed="0" covered="10"/>
+      <counter type="BRANCH" missed="0" covered="2"/>
+      <counter type="LINE" missed="0" covered="1"/>
+      <counter type="COMPLEXITY" missed="0" covered="2"/>
+      <counter type="METHOD" missed="0" covered="1"/>
+      <counter type="CLASS" missed="0" covered="1"/>
+    </class>
+    <sourcefile name="Item.kt">
+      <line nr="3" mi="0" ci="33" mb="0" cb="0"/>
+      <line nr="5" mi="0" ci="8" mb="0" cb="0"/>
+      <line nr="9" mi="0" ci="7" mb="0" cb="2"/>
+      <counter type="INSTRUCTION" missed="0" covered="57"/>
+      <counter type="BRANCH" missed="0" covered="2"/>
+      <counter type="LINE" missed="0" covered="3"/>
+      <counter type="COMPLEXITY" missed="0" covered="10"/>
+      <counter type="METHOD" missed="0" covered="9"/>
+      <counter type="CLASS" missed="0" covered="2"/>
+    </sourcefile>
+    <sourcefile name="GildedRose.kt">
+      <line nr="8" mi="0" ci="10" mb="0" cb="0"/>
+      <line nr="9" mi="4" ci="6" mb="0" cb="0"/>
+      <line nr="10" mi="0" ci="6" mb="0" cb="0"/>
+      <line nr="15" mi="0" ci="5" mb="0" cb="0"/>
+      <line nr="20" mi="0" ci="5" mb="0" cb="0"/>
+      <line nr="21" mi="0" ci="6" mb="0" cb="0"/>
+      <line nr="22" mi="0" ci="4" mb="0" cb="0"/>
+      <line nr="23" mi="0" ci="3" mb="0" cb="0"/>
+      <line nr="24" mi="0" ci="1" mb="0" cb="0"/>
+      <line nr="27" mi="0" ci="4" mb="0" cb="0"/>
+      <line nr="28" mi="0" ci="4" mb="0" cb="0"/>
+      <line nr="29" mi="0" ci="4" mb="0" cb="0"/>
+      <line nr="30" mi="0" ci="1" mb="0" cb="0"/>
+      <line nr="33" mi="0" ci="6" mb="0" cb="0"/>
+      <line nr="87" mi="0" ci="1" mb="0" cb="0"/>
+      <counter type="INSTRUCTION" missed="7" covered="72"/>
+      <counter type="LINE" missed="0" covered="15"/>
+      <counter type="COMPLEXITY" missed="1" covered="7"/>
+      <counter type="METHOD" missed="1" covered="7"/>
+      <counter type="CLASS" missed="0" covered="1"/>
+    </sourcefile>
+    <counter type="INSTRUCTION" missed="7" covered="129"/>
+    <counter type="BRANCH" missed="0" covered="2"/>
+    <counter type="LINE" missed="0" covered="18"/>
+    <counter type="COMPLEXITY" missed="1" covered="17"/>
+    <counter type="METHOD" missed="1" covered="16"/>
+    <counter type="CLASS" missed="0" covered="3"/>
+  </package>
+  <package name="dev/adamko/gildedrose/item">
+    <class name="dev/adamko/gildedrose/item/ItemTemplates$conjuredItem$1"
+      sourcefilename="ItemTemplates.kt">
+      <method name="invoke" desc="(Ldev/adamko/gildedrose/item/ItemState;)I" line="52">
+        <counter type="INSTRUCTION" missed="0" covered="11"/>
+        <counter type="BRANCH" missed="0" covered="2"/>
+        <counter type="LINE" missed="0" covered="3"/>
+        <counter type="COMPLEXITY" missed="0" covered="2"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <counter type="INSTRUCTION" missed="0" covered="11"/>
+      <counter type="BRANCH" missed="0" covered="2"/>
+      <counter type="LINE" missed="0" covered="3"/>
+      <counter type="COMPLEXITY" missed="0" covered="2"/>
+      <counter type="METHOD" missed="0" covered="1"/>
+      <counter type="CLASS" missed="0" covered="1"/>
+    </class>
+    <class name="dev/adamko/gildedrose/item/ItemTemplates$ticketItem$1$nonExpiredMutator$1"
+      sourcefilename="ItemTemplates.kt">
+      <method name="invoke" desc="(Ldev/adamko/gildedrose/item/ItemState;)I" line="74">
+        <counter type="INSTRUCTION" missed="10" covered="30"/>
+        <counter type="BRANCH" missed="2" covered="6"/>
+        <counter type="LINE" missed="0" covered="5"/>
+        <counter type="COMPLEXITY" missed="2" covered="3"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <counter type="INSTRUCTION" missed="10" covered="30"/>
+      <counter type="BRANCH" missed="2" covered="6"/>
+      <counter type="LINE" missed="0" covered="5"/>
+      <counter type="COMPLEXITY" missed="2" covered="3"/>
+      <counter type="METHOD" missed="0" covered="1"/>
+      <counter type="CLASS" missed="0" covered="1"/>
+    </class>
+    <class name="dev/adamko/gildedrose/item/ItemTemplates$ticketItem$1$ticketMutator$1"
+      sourcefilename="ItemTemplates.kt">
+      <method name="invoke"
+        desc="(Ldev/adamko/gildedrose/item/ItemState;)Ldev/adamko/gildedrose/item/ItemMutator;"
+        line="87">
+        <counter type="INSTRUCTION" missed="0" covered="14"/>
+        <counter type="BRANCH" missed="0" covered="2"/>
+        <counter type="LINE" missed="0" covered="3"/>
+        <counter type="COMPLEXITY" missed="0" covered="2"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <counter type="INSTRUCTION" missed="0" covered="14"/>
+      <counter type="BRANCH" missed="0" covered="2"/>
+      <counter type="LINE" missed="0" covered="3"/>
+      <counter type="COMPLEXITY" missed="0" covered="2"/>
+      <counter type="METHOD" missed="0" covered="1"/>
+      <counter type="CLASS" missed="0" covered="1"/>
+    </class>
+    <class name="dev/adamko/gildedrose/item/ItemTemplates$agedItem$1"
+      sourcefilename="ItemTemplates.kt">
+      <method name="invoke" desc="(Ldev/adamko/gildedrose/item/ItemState;)I" line="44">
+        <counter type="INSTRUCTION" missed="0" covered="11"/>
+        <counter type="BRANCH" missed="0" covered="2"/>
+        <counter type="LINE" missed="0" covered="3"/>
+        <counter type="COMPLEXITY" missed="0" covered="2"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <counter type="INSTRUCTION" missed="0" covered="11"/>
+      <counter type="BRANCH" missed="0" covered="2"/>
+      <counter type="LINE" missed="0" covered="3"/>
+      <counter type="COMPLEXITY" missed="0" covered="2"/>
+      <counter type="METHOD" missed="0" covered="1"/>
+      <counter type="CLASS" missed="0" covered="1"/>
+    </class>
+    <class name="dev/adamko/gildedrose/item/ItemMutator$Companion$constantQualityMutator$1"
+      sourcefilename="ItemMutator.kt">
+      <method name="applyMutation"
+        desc="(Ldev/adamko/gildedrose/item/ItemState;)Ldev/adamko/gildedrose/item/ItemState;"
+        line="44">
+        <counter type="INSTRUCTION" missed="0" covered="13"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="plus"
+        desc="(Ldev/adamko/gildedrose/item/ItemMutator;)Ldev/adamko/gildedrose/item/ItemMutator;"
+        line="44">
+        <counter type="INSTRUCTION" missed="4" covered="0"/>
+        <counter type="LINE" missed="1" covered="0"/>
+        <counter type="COMPLEXITY" missed="1" covered="0"/>
+        <counter type="METHOD" missed="1" covered="0"/>
+      </method>
+      <counter type="INSTRUCTION" missed="4" covered="13"/>
+      <counter type="LINE" missed="0" covered="1"/>
+      <counter type="COMPLEXITY" missed="1" covered="1"/>
+      <counter type="METHOD" missed="1" covered="1"/>
+      <counter type="CLASS" missed="0" covered="1"/>
+    </class>
+    <class name="dev/adamko/gildedrose/item/ItemMutator$Companion" sourcefilename="ItemMutator.kt">
+      <method name="getNoopMutator" desc="()Ldev/adamko/gildedrose/item/ItemMutator;" line="40">
+        <counter type="INSTRUCTION" missed="2" covered="0"/>
+        <counter type="LINE" missed="1" covered="0"/>
+        <counter type="COMPLEXITY" missed="1" covered="0"/>
+        <counter type="METHOD" missed="1" covered="0"/>
+      </method>
+      <method name="constantQualityMutator" desc="(I)Ldev/adamko/gildedrose/item/ItemMutator;"
+        line="44">
+        <counter type="INSTRUCTION" missed="0" covered="6"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="mutatorSelector"
+        desc="(Lkotlin/jvm/functions/Function1;)Ldev/adamko/gildedrose/item/ItemMutator;" line="48">
+        <counter type="INSTRUCTION" missed="0" covered="9"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="&lt;clinit&gt;" desc="()V" line="40">
+        <counter type="INSTRUCTION" missed="0" covered="8"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <counter type="INSTRUCTION" missed="2" covered="23"/>
+      <counter type="LINE" missed="0" covered="3"/>
+      <counter type="COMPLEXITY" missed="1" covered="3"/>
+      <counter type="METHOD" missed="1" covered="3"/>
+      <counter type="CLASS" missed="0" covered="1"/>
+    </class>
+    <class name="dev/adamko/gildedrose/item/ItemState$Companion" sourcefilename="ItemState.kt">
+      <method name="asState" desc="(Lcom/gildedrose/Item;)Ldev/adamko/gildedrose/item/ItemState;"
+        line="20">
+        <counter type="INSTRUCTION" missed="0" covered="8"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <counter type="INSTRUCTION" missed="0" covered="8"/>
+      <counter type="LINE" missed="0" covered="1"/>
+      <counter type="COMPLEXITY" missed="0" covered="1"/>
+      <counter type="METHOD" missed="0" covered="1"/>
+      <counter type="CLASS" missed="0" covered="1"/>
+    </class>
+    <class name="dev/adamko/gildedrose/item/ItemTemplateProvider"
+      sourcefilename="ItemTemplateProvider.kt"/>
+    <class name="dev/adamko/gildedrose/item/ItemState" sourcefilename="ItemState.kt">
+      <method name="&lt;init&gt;" desc="(Ljava/lang/String;IIZ)V" line="10">
+        <counter type="INSTRUCTION" missed="0" covered="18"/>
+        <counter type="LINE" missed="0" covered="5"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="getName" desc="()Ljava/lang/String;" line="11">
+        <counter type="INSTRUCTION" missed="0" covered="3"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="getSellIn" desc="()I" line="12">
+        <counter type="INSTRUCTION" missed="0" covered="3"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="getQuality" desc="()I" line="13">
+        <counter type="INSTRUCTION" missed="0" covered="3"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="isExpired" desc="()Z" line="14">
+        <counter type="INSTRUCTION" missed="0" covered="3"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="&lt;init&gt;" desc="(Lcom/gildedrose/Item;)V" line="17">
+        <counter type="INSTRUCTION" missed="0" covered="14"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <counter type="INSTRUCTION" missed="0" covered="44"/>
+      <counter type="LINE" missed="0" covered="6"/>
+      <counter type="COMPLEXITY" missed="0" covered="6"/>
+      <counter type="METHOD" missed="0" covered="6"/>
+      <counter type="CLASS" missed="0" covered="1"/>
+    </class>
+    <class name="dev/adamko/gildedrose/item/ItemMutator$Companion$mutatorSelector$1"
+      sourcefilename="ItemMutator.kt">
+      <method name="applyMutation"
+        desc="(Ldev/adamko/gildedrose/item/ItemState;)Ldev/adamko/gildedrose/item/ItemState;"
+        line="48">
+        <counter type="INSTRUCTION" missed="0" covered="11"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="plus"
+        desc="(Ldev/adamko/gildedrose/item/ItemMutator;)Ldev/adamko/gildedrose/item/ItemMutator;"
+        line="48">
+        <counter type="INSTRUCTION" missed="0" covered="4"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <counter type="INSTRUCTION" missed="0" covered="15"/>
+      <counter type="LINE" missed="0" covered="1"/>
+      <counter type="COMPLEXITY" missed="0" covered="2"/>
+      <counter type="METHOD" missed="0" covered="2"/>
+      <counter type="CLASS" missed="0" covered="1"/>
+    </class>
+    <class name="dev/adamko/gildedrose/item/ItemTemplates" sourcefilename="ItemTemplates.kt">
+      <method name="getLegendaryItem" desc="()Ldev/adamko/gildedrose/item/ItemTemplate;" line="14">
+        <counter type="INSTRUCTION" missed="0" covered="2"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="qualityAdjustingItemTemplate"
+        desc="(Lkotlin/jvm/functions/Function1;)Ldev/adamko/gildedrose/item/ItemTemplate;"
+        line="29">
+        <counter type="INSTRUCTION" missed="0" covered="21"/>
+        <counter type="LINE" missed="0" covered="4"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="getRegularItem" desc="()Ldev/adamko/gildedrose/item/ItemTemplate;" line="35">
+        <counter type="INSTRUCTION" missed="0" covered="2"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="getAgedItem" desc="()Ldev/adamko/gildedrose/item/ItemTemplate;" line="43">
+        <counter type="INSTRUCTION" missed="0" covered="2"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="getConjuredItem" desc="()Ldev/adamko/gildedrose/item/ItemTemplate;" line="51">
+        <counter type="INSTRUCTION" missed="0" covered="2"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="getTicketItem" desc="()Ldev/adamko/gildedrose/item/ItemTemplate;" line="69">
+        <counter type="INSTRUCTION" missed="0" covered="2"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="&lt;clinit&gt;" desc="()V" line="11">
+        <counter type="INSTRUCTION" missed="0" covered="74"/>
+        <counter type="LINE" missed="0" covered="12"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <counter type="INSTRUCTION" missed="0" covered="105"/>
+      <counter type="LINE" missed="0" covered="16"/>
+      <counter type="COMPLEXITY" missed="0" covered="7"/>
+      <counter type="METHOD" missed="0" covered="7"/>
+      <counter type="CLASS" missed="0" covered="1"/>
+    </class>
+    <class name="dev/adamko/gildedrose/item/ItemMutator$Companion$noopMutator$1"
+      sourcefilename="ItemMutator.kt">
+      <method name="applyMutation"
+        desc="(Ldev/adamko/gildedrose/item/ItemState;)Ldev/adamko/gildedrose/item/ItemState;"
+        line="40">
+        <counter type="INSTRUCTION" missed="5" covered="0"/>
+        <counter type="LINE" missed="1" covered="0"/>
+        <counter type="COMPLEXITY" missed="1" covered="0"/>
+        <counter type="METHOD" missed="1" covered="0"/>
+      </method>
+      <method name="plus"
+        desc="(Ldev/adamko/gildedrose/item/ItemMutator;)Ldev/adamko/gildedrose/item/ItemMutator;"
+        line="40">
+        <counter type="INSTRUCTION" missed="4" covered="0"/>
+        <counter type="LINE" missed="1" covered="0"/>
+        <counter type="COMPLEXITY" missed="1" covered="0"/>
+        <counter type="METHOD" missed="1" covered="0"/>
+      </method>
+      <counter type="INSTRUCTION" missed="9" covered="0"/>
+      <counter type="LINE" missed="1" covered="0"/>
+      <counter type="COMPLEXITY" missed="2" covered="0"/>
+      <counter type="METHOD" missed="2" covered="0"/>
+      <counter type="CLASS" missed="1" covered="0"/>
+    </class>
+    <class name="dev/adamko/gildedrose/item/ItemMutator" sourcefilename="ItemMutator.kt"/>
+    <class name="dev/adamko/gildedrose/item/ItemTemplateProvider$Companion"
+      sourcefilename="ItemTemplateProvider.kt">
+      <method name="getDefaultTemplateProvider"
+        desc="()Ldev/adamko/gildedrose/item/ItemTemplateProvider;" line="13">
+        <counter type="INSTRUCTION" missed="0" covered="2"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="defaultTemplateProvider$lambda-1"
+        desc="(Ldev/adamko/gildedrose/item/ItemState;)Ldev/adamko/gildedrose/item/ItemTemplate;"
+        line="14">
+        <counter type="INSTRUCTION" missed="0" covered="51"/>
+        <counter type="BRANCH" missed="0" covered="8"/>
+        <counter type="LINE" missed="0" covered="7"/>
+        <counter type="COMPLEXITY" missed="0" covered="5"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="&lt;clinit&gt;" desc="()V" line="13">
+        <counter type="INSTRUCTION" missed="0" covered="7"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <counter type="INSTRUCTION" missed="0" covered="60"/>
+      <counter type="BRANCH" missed="0" covered="8"/>
+      <counter type="LINE" missed="0" covered="8"/>
+      <counter type="COMPLEXITY" missed="0" covered="7"/>
+      <counter type="METHOD" missed="0" covered="3"/>
+      <counter type="CLASS" missed="0" covered="1"/>
+    </class>
+    <class name="dev/adamko/gildedrose/item/ItemTemplates$regularSellInDecrement$1"
+      sourcefilename="ItemTemplates.kt">
+      <method name="applyMutation"
+        desc="(Ldev/adamko/gildedrose/item/ItemState;)Ldev/adamko/gildedrose/item/ItemState;"
+        line="11">
+        <counter type="INSTRUCTION" missed="0" covered="15"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="plus"
+        desc="(Ldev/adamko/gildedrose/item/ItemMutator;)Ldev/adamko/gildedrose/item/ItemMutator;"
+        line="11">
+        <counter type="INSTRUCTION" missed="4" covered="0"/>
+        <counter type="LINE" missed="1" covered="0"/>
+        <counter type="COMPLEXITY" missed="1" covered="0"/>
+        <counter type="METHOD" missed="1" covered="0"/>
+      </method>
+      <counter type="INSTRUCTION" missed="4" covered="15"/>
+      <counter type="LINE" missed="0" covered="1"/>
+      <counter type="COMPLEXITY" missed="1" covered="1"/>
+      <counter type="METHOD" missed="1" covered="1"/>
+      <counter type="CLASS" missed="0" covered="1"/>
+    </class>
+    <class name="dev/adamko/gildedrose/item/ItemTemplates$regularItem$1"
+      sourcefilename="ItemTemplates.kt">
+      <method name="invoke" desc="(Ldev/adamko/gildedrose/item/ItemState;)I" line="36">
+        <counter type="INSTRUCTION" missed="0" covered="11"/>
+        <counter type="BRANCH" missed="0" covered="2"/>
+        <counter type="LINE" missed="0" covered="3"/>
+        <counter type="COMPLEXITY" missed="0" covered="2"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <counter type="INSTRUCTION" missed="0" covered="11"/>
+      <counter type="BRANCH" missed="0" covered="2"/>
+      <counter type="LINE" missed="0" covered="3"/>
+      <counter type="COMPLEXITY" missed="0" covered="2"/>
+      <counter type="METHOD" missed="0" covered="1"/>
+      <counter type="CLASS" missed="0" covered="1"/>
+    </class>
+    <class name="dev/adamko/gildedrose/item/ItemMutator$QualityMutator"
+      sourcefilename="ItemMutator.kt">
+      <method name="&lt;init&gt;" desc="(Lkotlin/ranges/IntRange;Lkotlin/jvm/functions/Function1;)V"
+        line="24">
+        <counter type="INSTRUCTION" missed="0" covered="15"/>
+        <counter type="LINE" missed="0" covered="3"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="getQualityDeltaProvider" desc="()Lkotlin/jvm/functions/Function1;" line="26">
+        <counter type="INSTRUCTION" missed="3" covered="0"/>
+        <counter type="LINE" missed="1" covered="0"/>
+        <counter type="COMPLEXITY" missed="1" covered="0"/>
+        <counter type="METHOD" missed="1" covered="0"/>
+      </method>
+      <method name="applyMutation"
+        desc="(Ldev/adamko/gildedrose/item/ItemState;)Ldev/adamko/gildedrose/item/ItemState;"
+        line="30">
+        <counter type="INSTRUCTION" missed="0" covered="28"/>
+        <counter type="LINE" missed="0" covered="3"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="plus"
+        desc="(Ldev/adamko/gildedrose/item/ItemMutator;)Ldev/adamko/gildedrose/item/ItemMutator;"
+        line="24">
+        <counter type="INSTRUCTION" missed="0" covered="4"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <counter type="INSTRUCTION" missed="3" covered="47"/>
+      <counter type="LINE" missed="0" covered="6"/>
+      <counter type="COMPLEXITY" missed="1" covered="3"/>
+      <counter type="METHOD" missed="1" covered="3"/>
+      <counter type="CLASS" missed="0" covered="1"/>
+    </class>
+    <class name="dev/adamko/gildedrose/item/ItemTemplate" sourcefilename="ItemTemplate.kt">
+      <method name="&lt;init&gt;" desc="(Ldev/adamko/gildedrose/item/ItemMutator;)V" line="15">
+        <counter type="INSTRUCTION" missed="0" covered="9"/>
+        <counter type="LINE" missed="0" covered="2"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="&lt;init&gt;" desc="([Ldev/adamko/gildedrose/item/ItemMutator;)V" line="21">
+        <counter type="INSTRUCTION" missed="7" covered="25"/>
+        <counter type="BRANCH" missed="2" covered="2"/>
+        <counter type="LINE" missed="1" covered="4"/>
+        <counter type="COMPLEXITY" missed="2" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <counter type="INSTRUCTION" missed="7" covered="34"/>
+      <counter type="BRANCH" missed="2" covered="2"/>
+      <counter type="LINE" missed="1" covered="6"/>
+      <counter type="COMPLEXITY" missed="2" covered="2"/>
+      <counter type="METHOD" missed="0" covered="2"/>
+      <counter type="CLASS" missed="0" covered="1"/>
+    </class>
+    <class name="dev/adamko/gildedrose/item/ItemMutator$DefaultImpls"
+      sourcefilename="ItemMutator.kt">
+      <method name="plus"
+        desc="(Ldev/adamko/gildedrose/item/ItemMutator;Ldev/adamko/gildedrose/item/ItemMutator;)Ldev/adamko/gildedrose/item/ItemMutator;"
+        line="21">
+        <counter type="INSTRUCTION" missed="0" covered="13"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <counter type="INSTRUCTION" missed="0" covered="13"/>
+      <counter type="LINE" missed="0" covered="1"/>
+      <counter type="COMPLEXITY" missed="0" covered="1"/>
+      <counter type="METHOD" missed="0" covered="1"/>
+      <counter type="CLASS" missed="0" covered="1"/>
+    </class>
+    <class name="dev/adamko/gildedrose/item/ItemMutator$plus$1" sourcefilename="ItemMutator.kt">
+      <method name="applyMutation"
+        desc="(Ldev/adamko/gildedrose/item/ItemState;)Ldev/adamko/gildedrose/item/ItemState;"
+        line="21">
+        <counter type="INSTRUCTION" missed="0" covered="11"/>
+        <counter type="LINE" missed="0" covered="1"/>
+        <counter type="COMPLEXITY" missed="0" covered="1"/>
+        <counter type="METHOD" missed="0" covered="1"/>
+      </method>
+      <method name="plus"
+        desc="(Ldev/adamko/gildedrose/item/ItemMutator;)Ldev/adamko/gildedrose/item/ItemMutator;"
+        line="21">
+        <counter type="INSTRUCTION" missed="4" covered="0"/>
+        <counter type="LINE" missed="1" covered="0"/>
+        <counter type="COMPLEXITY" missed="1" covered="0"/>
+        <counter type="METHOD" missed="1" covered="0"/>
+      </method>
+      <counter type="INSTRUCTION" missed="4" covered="11"/>
+      <counter type="LINE" missed="0" covered="1"/>
+      <counter type="COMPLEXITY" missed="1" covered="1"/>
+      <counter type="METHOD" missed="1" covered="1"/>
+      <counter type="CLASS" missed="0" covered="1"/>
+    </class>
+    <sourcefile name="ItemState.kt">
+      <line nr="10" mi="0" ci="3" mb="0" cb="0"/>
+      <line nr="11" mi="0" ci="6" mb="0" cb="0"/>
+      <line nr="12" mi="0" ci="6" mb="0" cb="0"/>
+      <line nr="13" mi="0" ci="6" mb="0" cb="0"/>
+      <line nr="14" mi="0" ci="6" mb="0" cb="0"/>
+      <line nr="17" mi="0" ci="11" mb="0" cb="0"/>
+      <line nr="20" mi="0" ci="5" mb="0" cb="0"/>
+      <counter type="INSTRUCTION" missed="0" covered="52"/>
+      <counter type="LINE" missed="0" covered="7"/>
+      <counter type="COMPLEXITY" missed="0" covered="7"/>
+      <counter type="METHOD" missed="0" covered="7"/>
+      <counter type="CLASS" missed="0" covered="2"/>
+    </sourcefile>
+    <sourcefile name="ItemTemplateProvider.kt">
+      <line nr="13" mi="0" ci="5" mb="0" cb="0"/>
+      <line nr="14" mi="0" ci="13" mb="0" cb="0"/>
+      <line nr="15" mi="0" ci="2" mb="0" cb="0"/>
+      <line nr="17" mi="0" ci="10" mb="0" cb="2"/>
+      <line nr="19" mi="0" ci="7" mb="0" cb="2"/>
+      <line nr="21" mi="0" ci="7" mb="0" cb="2"/>
+      <line nr="23" mi="0" ci="7" mb="0" cb="2"/>
+      <line nr="25" mi="0" ci="2" mb="0" cb="0"/>
+      <counter type="INSTRUCTION" missed="0" covered="60"/>
+      <counter type="BRANCH" missed="0" covered="8"/>
+      <counter type="LINE" missed="0" covered="8"/>
+      <counter type="COMPLEXITY" missed="0" covered="7"/>
+      <counter type="METHOD" missed="0" covered="3"/>
+      <counter type="CLASS" missed="0" covered="1"/>
+    </sourcefile>
+    <sourcefile name="ItemMutator.kt">
+      <line nr="21" mi="4" ci="15" mb="0" cb="0"/>
+      <line nr="24" mi="0" ci="7" mb="0" cb="0"/>
+      <line nr="25" mi="0" ci="3" mb="0" cb="0"/>
+      <line nr="26" mi="3" ci="3" mb="0" cb="0"/>
+      <line nr="30" mi="0" ci="7" mb="0" cb="0"/>
+      <line nr="31" mi="0" ci="9" mb="0" cb="0"/>
+      <line nr="32" mi="0" ci="9" mb="0" cb="0"/>
+      <line nr="40" mi="8" ci="4" mb="0" cb="0"/>
+      <line nr="44" mi="4" ci="16" mb="0" cb="0"/>
+      <line nr="48" mi="0" ci="18" mb="0" cb="0"/>
+      <counter type="INSTRUCTION" missed="22" covered="122"/>
+      <counter type="LINE" missed="0" covered="10"/>
+      <counter type="COMPLEXITY" missed="6" covered="11"/>
+      <counter type="METHOD" missed="6" covered="11"/>
+      <counter type="CLASS" missed="1" covered="6"/>
+    </sourcefile>
+    <sourcefile name="ItemTemplates.kt">
+      <line nr="11" mi="4" ci="15" mb="0" cb="0"/>
+      <line nr="14" mi="0" ci="6" mb="0" cb="0"/>
+      <line nr="15" mi="0" ci="3" mb="0" cb="0"/>
+      <line nr="19" mi="0" ci="6" mb="0" cb="0"/>
+      <line nr="29" mi="0" ci="3" mb="0" cb="0"/>
+      <line nr="30" mi="0" ci="15" mb="0" cb="0"/>
+      <line nr="31" mi="0" ci="2" mb="0" cb="0"/>
+      <line nr="32" mi="0" ci="1" mb="0" cb="0"/>
+      <line nr="35" mi="0" ci="7" mb="0" cb="0"/>
+      <line nr="36" mi="0" ci="2" mb="0" cb="0"/>
+      <line nr="37" mi="0" ci="5" mb="0" cb="2"/>
+      <line nr="38" mi="0" ci="1" mb="0" cb="0"/>
+      <line nr="43" mi="0" ci="7" mb="0" cb="0"/>
+      <line nr="44" mi="0" ci="2" mb="0" cb="0"/>
+      <line nr="45" mi="0" ci="5" mb="0" cb="2"/>
+      <line nr="46" mi="0" ci="1" mb="0" cb="0"/>
+      <line nr="51" mi="0" ci="7" mb="0" cb="0"/>
+      <line nr="52" mi="0" ci="2" mb="0" cb="0"/>
+      <line nr="53" mi="0" ci="5" mb="0" cb="2"/>
+      <line nr="54" mi="0" ci="1" mb="0" cb="0"/>
+      <line nr="69" mi="0" ci="15" mb="0" cb="0"/>
+      <line nr="71" mi="0" ci="4" mb="0" cb="0"/>
+      <line nr="73" mi="0" ci="7" mb="0" cb="0"/>
+      <line nr="74" mi="10" ci="12" mb="2" cb="2"/>
+      <line nr="75" mi="0" ci="2" mb="0" cb="0"/>
+      <line nr="77" mi="0" ci="6" mb="0" cb="2"/>
+      <line nr="79" mi="0" ci="6" mb="0" cb="2"/>
+      <line nr="81" mi="0" ci="1" mb="0" cb="0"/>
+      <line nr="86" mi="0" ci="9" mb="0" cb="0"/>
+      <line nr="87" mi="0" ci="2" mb="0" cb="0"/>
+      <line nr="88" mi="0" ci="6" mb="0" cb="2"/>
+      <line nr="89" mi="0" ci="3" mb="0" cb="0"/>
+      <line nr="94" mi="0" ci="6" mb="0" cb="0"/>
+      <counter type="INSTRUCTION" missed="14" covered="197"/>
+      <counter type="BRANCH" missed="2" covered="14"/>
+      <counter type="LINE" missed="0" covered="33"/>
+      <counter type="COMPLEXITY" missed="3" covered="19"/>
+      <counter type="METHOD" missed="1" covered="13"/>
+      <counter type="CLASS" missed="0" covered="7"/>
+    </sourcefile>
+    <sourcefile name="ItemTemplate.kt">
+      <line nr="15" mi="0" ci="3" mb="0" cb="0"/>
+      <line nr="16" mi="0" ci="3" mb="0" cb="0"/>
+      <line nr="21" mi="0" ci="2" mb="0" cb="0"/>
+      <line nr="22" mi="2" ci="9" mb="2" cb="2"/>
+      <line nr="23" mi="5" ci="0" mb="0" cb="0"/>
+      <line nr="25" mi="0" ci="10" mb="0" cb="0"/>
+      <line nr="26" mi="0" ci="1" mb="0" cb="0"/>
+      <counter type="INSTRUCTION" missed="7" covered="34"/>
+      <counter type="BRANCH" missed="2" covered="2"/>
+      <counter type="LINE" missed="1" covered="6"/>
+      <counter type="COMPLEXITY" missed="2" covered="2"/>
+      <counter type="METHOD" missed="0" covered="2"/>
+      <counter type="CLASS" missed="0" covered="1"/>
+    </sourcefile>
+    <counter type="INSTRUCTION" missed="43" covered="465"/>
+    <counter type="BRANCH" missed="4" covered="24"/>
+    <counter type="LINE" missed="1" covered="64"/>
+    <counter type="COMPLEXITY" missed="11" covered="46"/>
+    <counter type="METHOD" missed="7" covered="36"/>
+    <counter type="CLASS" missed="1" covered="17"/>
+  </package>
+  <counter type="INSTRUCTION" missed="50" covered="594"/>
+  <counter type="BRANCH" missed="4" covered="26"/>
+  <counter type="LINE" missed="1" covered="82"/>
+  <counter type="COMPLEXITY" missed="12" covered="63"/>
+  <counter type="METHOD" missed="8" covered="52"/>
+  <counter type="CLASS" missed="1" covered="20"/>
+</report>

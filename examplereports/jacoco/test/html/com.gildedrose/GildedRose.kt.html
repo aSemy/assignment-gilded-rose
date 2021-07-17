@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/>
+  <link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/>
+  <title>GildedRose.kt</title>
+  <link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/>
+  <script type="text/javascript" src="../jacoco-resources/prettify.js"></script>
+</head>
+<body onload="window['PR_TAB_WIDTH']=4;prettyPrint()">
+<div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html"
+                                                              class="el_session">Sessions</a></span><a
+    href="../index.html" class="el_report">gilded-rose</a> &gt; <a href="index.source.html"
+                                                                   class="el_package">com.gildedrose</a>
+  &gt; <span class="el_source">GildedRose.kt</span></div>
+<h1>GildedRose.kt</h1>
+<pre class="source lang-java linenums">package com.gildedrose
+
+import dev.adamko.gildedrose.item.ItemState
+import dev.adamko.gildedrose.item.ItemState.Companion.asState
+import dev.adamko.gildedrose.item.ItemTemplate
+import dev.adamko.gildedrose.item.ItemTemplateProvider
+
+<span class="fc" id="L8">class GildedRose(</span>
+<span class="pc" id="L9">    var items: Array&lt;Item&gt;,</span>
+<span class="fc" id="L10">    private val itemTemplateProvider: ItemTemplateProvider = ItemTemplateProvider.defaultTemplateProvider,</span>
+) {
+
+  /** Convenience property for fetching a [ItemTemplate] from [itemTemplateProvider]. */
+  private val ItemState.template
+<span class="fc" id="L15">    get() = itemTemplateProvider.getTemplate(this)</span>
+
+  fun updateQuality() {
+//    legacy()
+
+<span class="fc" id="L20">    items.forEach { item -&gt;</span>
+<span class="fc" id="L21">      val update = getUpdatedItem(item.asState())</span>
+<span class="fc" id="L22">      applyUpdate(item, update)</span>
+<span class="fc" id="L23">    }</span>
+<span class="fc" id="L24">  }</span>
+
+  private fun applyUpdate(item: Item, update: ItemState) {
+<span class="fc" id="L27">    item.name = update.name</span>
+<span class="fc" id="L28">    item.sellIn = update.sellIn</span>
+<span class="fc" id="L29">    item.quality = update.quality</span>
+<span class="fc" id="L30">  }</span>
+
+  private fun getUpdatedItem(item: ItemState): ItemState {
+<span class="fc" id="L33">    return item.template.applyMutation(item)</span>
+  }
+
+//  fun legacy() {
+//    for (i in items.indices) {
+//      if (items[i].name != &quot;Aged Brie&quot; &amp;&amp; items[i].name != &quot;Backstage passes to a TAFKAL80ETC concert&quot;) {
+//        if (items[i].quality &gt; 0) {
+//          if (items[i].name != &quot;Sulfuras, Hand of Ragnaros&quot;) {
+//            items[i].quality = items[i].quality - 1
+//          }
+//        }
+//      } else {
+//        if (items[i].quality &lt; 50) {
+//          items[i].quality = items[i].quality + 1
+//
+//          if (items[i].name == &quot;Backstage passes to a TAFKAL80ETC concert&quot;) {
+//            if (items[i].sellIn &lt; 11) {
+//              if (items[i].quality &lt; 50) {
+//                items[i].quality = items[i].quality + 1
+//              }
+//            }
+//
+//            if (items[i].sellIn &lt; 6) {
+//              if (items[i].quality &lt; 50) {
+//                items[i].quality = items[i].quality + 1
+//              }
+//            }
+//          }
+//        }
+//      }
+//
+//      if (items[i].name != &quot;Sulfuras, Hand of Ragnaros&quot;) {
+//        items[i].sellIn = items[i].sellIn - 1
+//      }
+//
+//      if (items[i].sellIn &lt; 0) {
+//        if (items[i].name != &quot;Aged Brie&quot;) {
+//          if (items[i].name != &quot;Backstage passes to a TAFKAL80ETC concert&quot;) {
+//            if (items[i].quality &gt; 0) {
+//              if (items[i].name != &quot;Sulfuras, Hand of Ragnaros&quot;) {
+//                items[i].quality = items[i].quality - 1
+//              }
+//            }
+//          } else {
+//            items[i].quality = items[i].quality - items[i].quality
+//          }
+//        } else {
+//          if (items[i].quality &lt; 50) {
+//            items[i].quality = items[i].quality + 1
+//          }
+//        }
+//      }
+//    }
+//  }
+<span class="fc" id="L87">}</span>
+</pre>
+<div class="footer"><span class="right">Created with <a
+    href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div>
+</body>
+</html>

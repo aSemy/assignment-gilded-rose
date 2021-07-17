@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>ItemState.kt</h1>
+
+<table class="src">
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_1'/>
+      1
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_1'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''>package dev.adamko.gildedrose.item</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_2'/>
+      2
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_2'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''></span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_3'/>
+      3
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_3'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''>import com.gildedrose.Item</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_4'/>
+      4
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_4'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''>import com.gildedrose.isExpired</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_5'/>
+      5
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_5'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''></span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_6'/>
+      6
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_6'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''>/**</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_7'/>
+      7
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_7'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''> * Freeze the state of an [Item], so it can be used safely in other contexts without mutating</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_8'/>
+      8
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_8'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''> * the original.</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_9'/>
+      9
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_9'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''> */</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='covered'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_10'/>
+      10
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_10'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class='covered'>
+      <pre><span class=''>data class ItemState(</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='covered'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_11'/>
+      11
+    </td>
+    <td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_11'>1</a>
+<span>
+
+1. getName : replaced return value with &#34;&#34; for dev/adamko/gildedrose/item/ItemState::getName &rarr; KILLED<br/>
+
+</span>
+</span>
+    </td>
+    <td class='covered'>
+      <pre><span class='killed'>    val name: String,</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='covered'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_12'/>
+      12
+    </td>
+    <td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_12'>1</a>
+<span>
+
+1. getSellIn : replaced int return with 0 for dev/adamko/gildedrose/item/ItemState::getSellIn &rarr; KILLED<br/>
+
+</span>
+</span>
+    </td>
+    <td class='covered'>
+      <pre><span class='killed'>    val sellIn: Int,</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='covered'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_13'/>
+      13
+    </td>
+    <td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_13'>1</a>
+<span>
+
+1. getQuality : replaced int return with 0 for dev/adamko/gildedrose/item/ItemState::getQuality &rarr; KILLED<br/>
+
+</span>
+</span>
+    </td>
+    <td class='covered'>
+      <pre><span class='killed'>    val quality: Int,</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='covered'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_14'/>
+      14
+    </td>
+    <td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_14'>2</a>
+<span>
+
+1. isExpired : replaced boolean return with false for dev/adamko/gildedrose/item/ItemState::isExpired &rarr; KILLED<br/>
+
+2. isExpired : replaced boolean return with true for dev/adamko/gildedrose/item/ItemState::isExpired &rarr; KILLED<br/>
+
+</span>
+</span>
+    </td>
+    <td class='covered'>
+      <pre><span class='killed'>    val isExpired: Boolean,</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_15'/>
+      15
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_15'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''>) {</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_16'/>
+      16
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_16'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''></span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='covered'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_17'/>
+      17
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_17'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class='covered'>
+      <pre><span class=''>  constructor(item: Item) : this(item.name, item.sellIn, item.quality, item.isExpired())</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_18'/>
+      18
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_18'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''></span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='covered'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_19'/>
+      19
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_19'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class='covered'>
+      <pre><span class=''>  companion object {</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='covered'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_20'/>
+      20
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_20'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class='covered'>
+      <pre><span class=''>    fun Item.asState(): ItemState = ItemState(this)</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_21'/>
+      21
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_21'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''>  }</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td class='na'>
+      <a name='org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_22'/>
+      22
+    </td>
+    <td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_22'></a>
+<span>
+</span>
+</span>
+    </td>
+    <td class=''>
+      <pre><span class=''>}</span></pre>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td></td>
+    <td></td>
+    <td><h2>Mutations</h2></td>
+  </tr>
+
+
+  <tr>
+    <td><a href='#org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_11'>11</a></td>
+    <td></td>
+    <td>
+
+      <a name='grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_11'/>
+
+      <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getName<br/><b>Killed by : </b>dev.adamko.gildedrose.gildedrosetests.ConjuredItems.Given: a conjured item When: quality is updated And: is NOT expired Then: quality should change by -2</span></span>
+        replaced return value with &#34;&#34; for dev/adamko/gildedrose/item/ItemState::getName
+        &rarr; KILLED</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td><a href='#org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_12'>12</a></td>
+    <td></td>
+    <td>
+
+      <a name='grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_12'/>
+
+      <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getSellIn<br/><b>Killed by : </b>dev.adamko.gildedrose.gildedrosetests.LegendaryItems.Given: any legendary item And: initial quality is valid (80) When: quality is updated Then: sellIn is unaffected</span></span>
+        replaced int return with 0 for dev/adamko/gildedrose/item/ItemState::getSellIn &rarr; KILLED
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td><a href='#org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_13'>13</a></td>
+    <td></td>
+    <td>
+
+      <a name='grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_13'/>
+
+      <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getQuality<br/><b>Killed by : </b>dev.adamko.gildedrose.gildedrosetests.RegularItems.Given: a regular item When: quality is updated And: is NOT expired Then: quality should change by -1</span></span>
+        replaced int return with 0 for dev/adamko/gildedrose/item/ItemState::getQuality &rarr;
+        KILLED</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td><a href='#org.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_14'>14</a></td>
+    <td></td>
+    <td>
+
+      <a name='grouporg.pitest.mutationtest.report.html.SourceFile@9cb8a8d4_14'/>
+
+      <p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isExpired<br/><b>Killed by : </b>dev.adamko.gildedrose.gildedrosetests.RegularItems.Given: a regular item When: quality is updated And: is expired Then: quality should change by -2</span></span>
+        replaced boolean return with false for dev/adamko/gildedrose/item/ItemState::isExpired
+        &rarr; KILLED</p>
+      <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isExpired<br/><b>Killed by : </b>dev.adamko.gildedrose.gildedrosetests.RegularItems.Given: a regular item When: quality is updated And: is NOT expired Then: quality should change by -1</span></span>
+        replaced boolean return with true for dev/adamko/gildedrose/item/ItemState::isExpired &rarr;
+        KILLED</p>
+    </td>
+  </tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+
+  <li class='mutator'>BOOLEAN_FALSE_RETURN</li>
+
+  <li class='mutator'>BOOLEAN_TRUE_RETURN</li>
+
+  <li class='mutator'>CONDITIONALS_BOUNDARY_MUTATOR</li>
+
+  <li class='mutator'>EMPTY_RETURN_VALUES</li>
+
+  <li class='mutator'>EXPERIMENTAL_SWITCH_MUTATOR</li>
+
+  <li class='mutator'>INCREMENTS_MUTATOR</li>
+
+  <li class='mutator'>INVERT_NEGS_MUTATOR</li>
+
+  <li class='mutator'>MATH_MUTATOR</li>
+
+  <li class='mutator'>NEGATE_CONDITIONALS_MUTATOR</li>
+
+  <li class='mutator'>NULL_RETURN_VALUES</li>
+
+  <li class='mutator'>PRIMITIVE_RETURN_VALS_MUTATOR</li>
+
+  <li class='mutator'>REMOVE_CONDITIONALS_EQUAL_ELSE_MUTATOR</li>
+
+  <li class='mutator'>VOID_METHOD_CALL_MUTATOR</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+  <li>dev.adamko.gildedrose.gildedrosetests.MultipleItems. (25399 ms)</li>
+  <li>com.gildedrose.GildedRoseTest. (1694 ms)</li>
+  <li>dev.adamko.gildedrose.gildedrosetests.AgedItems. (234 ms)</li>
+  <li>dev.adamko.gildedrose.gildedrosetests.AnyItem. (545 ms)</li>
+  <li>dev.adamko.gildedrose.gildedrosetests.NonLegendaryItems. (89 ms)</li>
+  <li>dev.adamko.gildedrose.gildedrosetests.RegularItems. (78 ms)</li>
+  <li>dev.adamko.gildedrose.gildedrosetests.ConjuredItems. (116 ms)</li>
+  <li>dev.adamko.gildedrose.gildedrosetests.TicketItems. (151 ms)</li>
+  <li>dev.adamko.gildedrose.gildedrosetests.LegendaryItems. (146 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.6.3
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/>
+  <link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/>
+  <title>ItemMutator.kt</title>
+  <link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/>
+  <script type="text/javascript" src="../jacoco-resources/prettify.js"></script>
+</head>
+<body onload="window['PR_TAB_WIDTH']=4;prettyPrint()">
+<div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html"
+                                                              class="el_session">Sessions</a></span><a
+    href="../index.html" class="el_report">gilded-rose</a> &gt; <a href="index.source.html"
+                                                                   class="el_package">dev.adamko.gildedrose.item</a>
+  &gt; <span class="el_source">ItemMutator.kt</span></div>
+<h1>ItemMutator.kt</h1>
+<pre class="source lang-java linenums">package dev.adamko.gildedrose.item
+
+import dev.adamko.gildedrose.item.ItemMutator.Companion.noopMutator
+
+
+/**
+ * Given an [ItemState], mutate it (or not, see [noopMutator]) and return a new [ItemState].
+ *
+ * See [ItemTemplates] for implementations.
+ *
+ * Multiple mutators can be combined using [ItemMutator.plus].
+ *
+ * @see ItemTemplates
+ */
+fun interface ItemMutator {
+
+  fun applyMutation(item: ItemState): ItemState
+
+  /** Create a new [ItemMutator] that first applies this mutation, and then [other]. */
+  operator fun plus(other: ItemMutator): ItemMutator =
+<span class="pc"
+      id="L21">      ItemMutator { item -&gt; other.applyMutation(applyMutation(item)) }</span>
+
+  /** Returns a new [ItemState] with an adjusted [ItemState.quality]. */
+<span class="fc" id="L24">  class QualityMutator(</span>
+<span class="fc" id="L25">      private val range: IntRange,</span>
+<span class="pc" id="L26">      val qualityDeltaProvider: (ItemState) -&gt; Int</span>
+  ) : ItemMutator {
+
+    override fun applyMutation(item: ItemState): ItemState {
+<span class="fc" id="L30">      val delta = qualityDeltaProvider(item)</span>
+<span class="fc" id="L31">      val newQuality = (item.quality + delta).coerceIn(range)</span>
+<span class="fc" id="L32">      return item.copy(quality = newQuality)</span>
+    }
+
+  }
+
+  companion object {
+
+    /** Does nothing  */
+<span class="pc" id="L40">    val noopMutator = ItemMutator { it }</span>
+
+    /** Sets the quality to be a constant number. */
+    fun constantQualityMutator(constantQuality: Int) =
+<span class="pc" id="L44">        ItemMutator { it.copy(quality = constantQuality) }</span>
+
+    /** Select between different [ItemMutator]s, based on an [ItemState]. */
+    fun mutatorSelector(selector: (ItemState) -&gt; ItemMutator) =
+<span class="fc"
+      id="L48">        ItemMutator { item -&gt; selector(item).applyMutation(item) }</span>
+
+  }
+}
+</pre>
+<div class="footer"><span class="right">Created with <a
+    href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div>
+</body>
+</html>
