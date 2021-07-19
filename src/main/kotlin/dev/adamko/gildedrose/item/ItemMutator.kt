@@ -1,10 +1,8 @@
 package dev.adamko.gildedrose.item
 
-import dev.adamko.gildedrose.item.ItemMutator.Companion.noopMutator
-
 
 /**
- * Given an [ItemState], mutate it (or not, see [noopMutator]) and return a new [ItemState].
+ * Given an [ItemState], mutate it and return a new [ItemState].
  *
  * See [ItemTemplates] for implementations.
  *
@@ -36,10 +34,7 @@ fun interface ItemMutator {
 
   companion object {
 
-    /** Does nothing  */
-    val noopMutator = ItemMutator { it }
-
-    /** Sets the quality to be a constant number. */
+    /** Sets the quality to be a constant number, regardless of the current state. */
     fun constantQualityMutator(constantQuality: Int) =
         ItemMutator { it.copy(quality = constantQuality) }
 

@@ -1,6 +1,6 @@
 package dev.adamko.gildedrose.gildedrosetests
 
-import com.gildedrose.GildedRose
+import dev.adamko.gildedrose.GildedRoseDelegate
 import dev.adamko.gildedrose.testdata.ItemGens
 import io.kotest.assertions.withClue
 import io.kotest.core.spec.style.BehaviorSpec
@@ -10,6 +10,7 @@ import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.comparables.shouldBeEqualComparingTo
 import io.kotest.matchers.ints.shouldBeExactly
 import io.kotest.matchers.should
+import io.kotest.matchers.types.shouldBeSameInstanceAs
 import io.kotest.property.Arb
 import io.kotest.property.arbitrary.int
 import io.kotest.property.arbitrary.set
@@ -47,7 +48,7 @@ class MultipleItems : BehaviorSpec({
                   }
                 }
 
-                GildedRose(inputItems.toTypedArray()).updateQuality()
+                GildedRoseDelegate(inputItems.toTypedArray()).updateQuality()
 
                 withClue("inputItems.size") {
                   inputItems shouldHaveSize expectedItems.size
@@ -94,10 +95,16 @@ class MultipleItems : BehaviorSpec({
 
                 // create list of duplicated items
                 val inputItems = Array(numOfItems) { inputItem }
-                GildedRose(inputItems).updateQuality()
+                GildedRoseDelegate(inputItems).updateQuality()
 
                 withClue("expect same number of items after update") {
                   inputItems shouldHaveSize numOfItems
+                }
+                withClue("all items should be the same instance") {
+                  val anInstance = inputItems.first()
+                  inputItems.forAll {
+                    it shouldBeSameInstanceAs anInstance
+                  }
                 }
                 withClue("expect all results match the input") {
                   inputItems.forAll { resultingItem ->

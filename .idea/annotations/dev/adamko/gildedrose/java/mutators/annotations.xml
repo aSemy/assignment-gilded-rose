@@ -1,0 +1,75 @@
+<root>
+  <item
+    name='dev.adamko.gildedrose.java.mutators.ItemMutator dev.adamko.gildedrose.java.item.ItemState applyMutation(dev.adamko.gildedrose.java.item.ItemState)'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.mutators.ItemMutator dev.adamko.gildedrose.java.item.ItemState applyMutation(dev.adamko.gildedrose.java.item.ItemState) 0'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.mutators.ItemMutator dev.adamko.gildedrose.java.mutators.ItemMutator plus(dev.adamko.gildedrose.java.mutators.ItemMutator, dev.adamko.gildedrose.java.mutators.ItemMutator)'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.mutators.ItemMutator dev.adamko.gildedrose.java.mutators.ItemMutator plus(dev.adamko.gildedrose.java.mutators.ItemMutator, dev.adamko.gildedrose.java.mutators.ItemMutator) 0'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.mutators.ItemMutator dev.adamko.gildedrose.java.mutators.ItemMutator plus(dev.adamko.gildedrose.java.mutators.ItemMutator, dev.adamko.gildedrose.java.mutators.ItemMutator) 1'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.mutators.ItemMutator$1 dev.adamko.gildedrose.java.item.ItemState applyMutation(dev.adamko.gildedrose.java.item.ItemState)'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.mutators.ItemMutator$1 dev.adamko.gildedrose.java.item.ItemState applyMutation(dev.adamko.gildedrose.java.item.ItemState) 0'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.mutators.ItemMutators dev.adamko.gildedrose.java.mutators.ItemMutator constantQualityMutator(int)'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.mutators.ItemMutators dev.adamko.gildedrose.java.mutators.ItemMutator mutatorSelector(java.util.function.Function&lt;dev.adamko.gildedrose.java.item.ItemState,dev.adamko.gildedrose.java.mutators.ItemMutator&gt;)'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.mutators.ItemMutators dev.adamko.gildedrose.java.mutators.ItemMutator mutatorSelector(java.util.function.Function&lt;dev.adamko.gildedrose.java.item.ItemState,dev.adamko.gildedrose.java.mutators.ItemMutator&gt;) 0'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item name='dev.adamko.gildedrose.java.mutators.ItemMutators noopMutator'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.mutators.QualityDeltaProvider java.lang.Integer getDelta(dev.adamko.gildedrose.java.item.ItemState)'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.mutators.QualityDeltaProvider java.lang.Integer getDelta(dev.adamko.gildedrose.java.item.ItemState) 0'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.mutators.QualityMutator QualityMutator(kotlin.ranges.IntRange, dev.adamko.gildedrose.java.mutators.QualityDeltaProvider) 0'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.mutators.QualityMutator QualityMutator(kotlin.ranges.IntRange, dev.adamko.gildedrose.java.mutators.QualityDeltaProvider) 1'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.mutators.QualityMutator dev.adamko.gildedrose.java.item.ItemState applyMutation(dev.adamko.gildedrose.java.item.ItemState)'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.mutators.QualityMutator dev.adamko.gildedrose.java.item.ItemState applyMutation(dev.adamko.gildedrose.java.item.ItemState) 0'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item name='dev.adamko.gildedrose.java.mutators.QualityMutator qualityDeltaProvider'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item name='dev.adamko.gildedrose.java.mutators.QualityMutator range'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+</root>

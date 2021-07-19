@@ -2,7 +2,7 @@
 
 Requirements:
 
-* jdk 11
+* jdk 16
 
 ```shell
 ./gradlew build

@@ -1,5 +1,7 @@
 package com.gildedrose
 
+import dev.adamko.gildedrose.GildedRoseDelegate
+
 fun main(args: Array<String>) {
 
   println("OMGHAI!")
@@ -16,7 +18,7 @@ fun main(args: Array<String>) {
       Item("Conjured Mana Cake", 3, 6)
   )
 
-  val app = GildedRose(items)
+  val app = GildedRoseDelegate(items)
 
   var days = 10
   if (args.isNotEmpty()) {

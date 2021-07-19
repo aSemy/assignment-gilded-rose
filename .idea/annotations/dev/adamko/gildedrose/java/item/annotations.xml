@@ -1,0 +1,48 @@
+<root>
+  <item name='dev.adamko.gildedrose.java.item.ItemState ItemState(com.gildedrose.java.Item) 0'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.item.ItemState boolean isItemExpired(com.gildedrose.java.Item) 0'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.item.ItemState dev.adamko.gildedrose.java.item.ItemState withQuality(int)'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.item.ItemState dev.adamko.gildedrose.java.item.ItemState withSellIn(int)'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.item.ItemTemplate ItemTemplate(dev.adamko.gildedrose.java.mutators.ItemMutator...) 0'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.item.ItemTemplate dev.adamko.gildedrose.java.item.ItemState applyMutation(dev.adamko.gildedrose.java.item.ItemState)'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.item.ItemTemplate dev.adamko.gildedrose.java.item.ItemState applyMutation(dev.adamko.gildedrose.java.item.ItemState) 0'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item name='dev.adamko.gildedrose.java.item.ItemTemplate mutator'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.item.ItemTemplateProvider dev.adamko.gildedrose.java.item.ItemTemplate getTemplate(dev.adamko.gildedrose.java.item.ItemState)'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.item.ItemTemplateProvider dev.adamko.gildedrose.java.item.ItemTemplate getTemplate(dev.adamko.gildedrose.java.item.ItemState) 0'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.item.ItemTemplates dev.adamko.gildedrose.java.item.ItemTemplate createQualityAdjustingItemTemplate(dev.adamko.gildedrose.java.mutators.QualityDeltaProvider)'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='dev.adamko.gildedrose.java.item.ItemTemplates dev.adamko.gildedrose.java.item.ItemTemplate createQualityAdjustingItemTemplate(dev.adamko.gildedrose.java.mutators.QualityDeltaProvider) 0'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+</root>

@@ -1,0 +1,35 @@
+<root>
+  <item name='com.gildedrose.java.GildedRose GildedRose(com.gildedrose.java.Item[]) 0'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='com.gildedrose.java.GildedRose GildedRose(com.gildedrose.java.Item[], dev.adamko.gildedrose.java.item.ItemTemplateProvider) 0'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='com.gildedrose.java.GildedRose GildedRose(com.gildedrose.java.Item[], dev.adamko.gildedrose.java.item.ItemTemplateProvider) 1'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='com.gildedrose.java.GildedRose dev.adamko.gildedrose.java.item.ItemState getUpdatedItem(dev.adamko.gildedrose.java.item.ItemState)'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='com.gildedrose.java.GildedRose dev.adamko.gildedrose.java.item.ItemState getUpdatedItem(dev.adamko.gildedrose.java.item.ItemState) 0'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item name='com.gildedrose.java.GildedRose itemTemplateProvider'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item name='com.gildedrose.java.GildedRose items'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='com.gildedrose.java.GildedRose void applyUpdate(com.gildedrose.java.Item, dev.adamko.gildedrose.java.item.ItemState) 0'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+  <item
+    name='com.gildedrose.java.GildedRose void applyUpdate(com.gildedrose.java.Item, dev.adamko.gildedrose.java.item.ItemState) 1'>
+    <annotation name='org.jetbrains.annotations.NotNull'/>
+  </item>
+</root>

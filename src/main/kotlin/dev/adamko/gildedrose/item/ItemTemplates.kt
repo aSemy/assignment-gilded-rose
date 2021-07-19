@@ -8,7 +8,7 @@ import dev.adamko.gildedrose.item.ItemMutator.Companion.mutatorSelector
 object ItemTemplates {
 
   /** Decrease sellIn by `-1` */
-  private val regularSellInDecrement = ItemMutator { it.copy(sellIn = it.sellIn - 1) }
+  val regularSellInDecrement = ItemMutator { it.copy(sellIn = it.sellIn - 1) }
 
   /** > "Sulfuras", being a legendary item, never has to be sold or decreases in Quality */
   val legendaryItem = ItemTemplate(
@@ -16,7 +16,7 @@ object ItemTemplates {
   )
 
   /** Regular, non-legendary, items have a valid range of 0 to 50 (inclusive). */
-  private val regularItemValidRange = 0..50
+  val regularItemValidRange = 0..50
 
   /**
    * Create a [ItemTemplate] for an [Item]. The resulting template:
@@ -24,7 +24,7 @@ object ItemTemplates {
    *  - adjusts [Item.quality] using the delta from [qualityDeltaProvider]
    *  - adjust [Item.sellIn] using [regularSellInDecrement]
    */
-  private fun qualityAdjustingItemTemplate(
+  fun qualityAdjustingItemTemplate(
       qualityDeltaProvider: (ItemState) -> Int,
   ) = ItemTemplate(
       ItemMutator.QualityMutator(regularItemValidRange, qualityDeltaProvider),

@@ -1,3 +1,4 @@
+import net.ltgt.gradle.errorprone.errorprone
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
@@ -8,6 +9,7 @@ plugins {
   id("dev.jacomet.logging-capabilities")
   jacoco
   id("info.solidsoft.pitest")
+  id("net.ltgt.errorprone") version "2.0.2"
 }
 
 group = "com.gildedrose"
@@ -21,6 +23,7 @@ dependencies {
   implementation(kotlin("reflect"))
 
   testImplementation(libs.bundles.test.kotest)
+  errorprone("com.google.errorprone:error_prone_core:2.7.1")
 }
 
 tasks.withType<KotlinCompile> {
@@ -33,6 +36,16 @@ tasks.withType<KotlinCompile> {
         "-Xopt-in=kotlin.time.ExperimentalTime",
     )
   }
+}
+
+java {
+  toolchain {
+    languageVersion.set(JavaLanguageVersion.of(libs.versions.jvm.get()))
+  }
+}
+
+tasks.withType<JavaCompile>().configureEach {
+  options.errorprone.disableWarningsInGeneratedCode.set(true)
 }
 
 //<editor-fold desc="Test config">
@@ -68,6 +81,7 @@ tasks.jacocoTestReport {
 }
 
 pitest {
+  pitestVersion.set("1.6.7")
   targetClasses.addAll(
       "com.gildedrose.*",
       "dev.adamko.*",
@@ -80,6 +94,10 @@ pitest {
   mutators.add("STRONGER")
 //  mutators.add("ALL")
 //	testSourceSets.add(project.sourceSets.test)
+}
+
+tasks.pitest {
+  finalizedBy(tasks.jacocoTestReport)
 }
 
 tasks.check {

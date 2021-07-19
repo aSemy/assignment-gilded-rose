@@ -1,7 +1,7 @@
 package dev.adamko.gildedrose.gildedrosetests
 
-import com.gildedrose.GildedRose
 import com.gildedrose.Item
+import dev.adamko.gildedrose.GildedRoseDelegate
 import io.kotest.assertions.withClue
 import io.kotest.property.Gen
 import io.kotest.property.checkAll
@@ -24,15 +24,15 @@ suspend inline fun checkAllItems(
     withClue(
         """
               
-            inputs:
-              name: $inputName
-              sellIn: $inputSellIn
-              quality: $inputQuality
-              repetitions: $inputRepetitions
-            output:
-              item: $result
-            
-          """.trimIndent()
+          inputs:
+            name: $inputName
+            sellIn: $inputSellIn
+            quality: $inputQuality
+            repetitions: $inputRepetitions
+          output:
+            item: $result
+          
+        """.trimIndent()
     ) {
       AssertItemContext(inputName, inputSellIn, inputQuality, inputRepetitions, result).assert()
     }
@@ -41,7 +41,7 @@ suspend inline fun checkAllItems(
 
 fun createAndUpdateItem(name: String, sellIn: Int, quality: Int, repetitions: Int): Item {
   val item = Item(name, sellIn, quality)
-  val gildedRose = GildedRose(arrayOf(item))
+  val gildedRose = GildedRoseDelegate(arrayOf(item))
   repeat(repetitions) { gildedRose.updateQuality() }
   return item
 }
