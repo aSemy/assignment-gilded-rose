@@ -28,7 +28,7 @@ These are available in the build directory `./build/reports/`
 
 Example test reports are available:
 
-* [Unit tests](./examplereports/tests/test/index.html)
+* [Unit tests](./examplereports/kotest/index.html)
 * [Jacoco](./examplereports/jacoco/test/html/index.html)
 * [PIT test](./examplereports/pitest/index.html)
 
