@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="D:\Users\Adam\Projects\assignments\dpg-media-gilded-rose\build\reports\kotest\css\style.css" />
+  </head>
+  <body>
+    <h1>Class dev.adamko.gildedrose.gildedrosetests.MultipleItems</h1>
+    <a href="../index.html">Home</a>
+    <table>
+      <tr>
+        <th>Test</th>
+        <th>Duration</th>
+        <th>Result</th>
+      </tr>
+      <tr class="success">
+        <td>Given: multiple non-legendary items And: initial quality is inside valid range, 0..50 And: items are unique When: updateQuality is called Then: expect each input Item is in output, with sellIn -1</td>
+        <td>4</td>
+        <td>Passed</td>
+      </tr>
+      <tr class="success">
+        <td>Given: multiple non-legendary items And: initial quality is inside valid range, 0..50 And: items are duplicated When: updateQuality is called Then: expect each input Item is in output, with sellIn -1 * number of items</td>
+        <td>0</td>
+        <td>Passed</td>
+      </tr>
+      <tr class="success">
+        <td>Given: multiple non-legendary items And: initial quality is outside of valid range, 0..50 And: items are unique When: updateQuality is called Then: expect each input Item is in output, with sellIn -1</td>
+        <td>3</td>
+        <td>Passed</td>
+      </tr>
+      <tr class="success">
+        <td>Given: multiple non-legendary items And: initial quality is outside of valid range, 0..50 And: items are duplicated When: updateQuality is called Then: expect each input Item is in output, with sellIn -1 * number of items</td>
+        <td>0</td>
+        <td>Passed</td>
+      </tr>
+    </table>
+  </body>
+</html>

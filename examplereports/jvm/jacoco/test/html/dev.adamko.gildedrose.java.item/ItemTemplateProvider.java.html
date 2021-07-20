@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ItemTemplateProvider.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">gilded-rose</a> &gt; <a href="index.source.html" class="el_package">dev.adamko.gildedrose.java.item</a> &gt; <span class="el_source">ItemTemplateProvider.java</span></div><h1>ItemTemplateProvider.java</h1><pre class="source lang-java linenums">package dev.adamko.gildedrose.java.item;
+
+import dev.adamko.gildedrose.item.ItemTemplateProvider.Companion;
+import kotlin.text.StringsKt;
+
+
+/**
+ * A Java implementation of {@link dev.adamko.gildedrose.item.ItemTemplateProvider}
+ *
+ * @see dev.adamko.gildedrose.item.ItemTemplateProvider
+ */
+@FunctionalInterface
+public interface ItemTemplateProvider {
+
+  ItemTemplate getTemplate(ItemState item);
+
+  /**
+   * A Java implementation of {@link Companion#getDefaultTemplateProvider()}
+   *
+   * @see Companion#getDefaultTemplateProvider()
+   */
+<span class="fc" id="L22">  ItemTemplateProvider defaultTemplateProvider = item -&gt; {</span>
+
+    // conjured
+<span class="fc bfc" id="L25" title="All 2 branches covered.">    if (StringsKt.startsWith(item.name(), &quot;Conjured&quot;, false)) {</span>
+<span class="fc" id="L26">      return ItemTemplates.conjuredItem;</span>
+    }
+    // tickets
+<span class="fc bfc" id="L29" title="All 2 branches covered.">    else if (&quot;Backstage passes to a TAFKAL80ETC concert&quot;.equals(item.name())) {</span>
+<span class="fc" id="L30">      return ItemTemplates.ticketItem;</span>
+    }
+    // legendary
+<span class="fc bfc" id="L33" title="All 2 branches covered.">    else if (&quot;Sulfuras, Hand of Ragnaros&quot;.equals(item.name())) {</span>
+<span class="fc" id="L34">      return ItemTemplates.legendaryItem;</span>
+    }
+    // aged
+<span class="fc bfc" id="L37" title="All 2 branches covered.">    else if (&quot;Aged Brie&quot;.equals(item.name())) {</span>
+<span class="fc" id="L38">      return ItemTemplates.agedItem;</span>
+    }
+    // regular
+    else {
+<span class="fc" id="L42">      return ItemTemplates.regularItem;</span>
+    }
+
+  };
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

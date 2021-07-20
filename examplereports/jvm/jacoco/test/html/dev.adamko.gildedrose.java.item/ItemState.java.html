@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ItemState.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">gilded-rose</a> &gt; <a href="index.source.html" class="el_package">dev.adamko.gildedrose.java.item</a> &gt; <span class="el_source">ItemState.java</span></div><h1>ItemState.java</h1><pre class="source lang-java linenums">package dev.adamko.gildedrose.java.item;
+
+import com.gildedrose.java.Item;
+import org.jetbrains.annotations.NotNull;
+
+
+/**
+ * A Java implementation of {@link dev.adamko.gildedrose.item.ItemState}
+ *
+ * @see dev.adamko.gildedrose.item.ItemState
+ */
+<span class="fc" id="L12">public record ItemState(</span>
+    @NotNull
+    String name,
+    int sellIn,
+    int quality,
+    boolean isExpired
+) {
+
+  public ItemState(Item item) {
+<span class="fc" id="L21">    this(item.name, item.sellIn, item.quality, isItemExpired(item));</span>
+<span class="fc" id="L22">  }</span>
+
+  public ItemState withQuality(int quality) {
+<span class="fc" id="L25">    return new ItemState(this.name, this.sellIn, quality, this.isExpired);</span>
+  }
+
+  public ItemState withSellIn(int sellIn) {
+<span class="fc" id="L29">    return new ItemState(this.name, sellIn, this.quality, this.isExpired);</span>
+  }
+
+  private static boolean isItemExpired(Item item) {
+<span class="fc bfc" id="L33" title="All 2 branches covered.">    return item.sellIn &lt;= 0;</span>
+  }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ItemTemplates.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">gilded-rose</a> &gt; <a href="index.source.html" class="el_package">dev.adamko.gildedrose.item</a> &gt; <span class="el_source">ItemTemplates.kt</span></div><h1>ItemTemplates.kt</h1><pre class="source lang-java linenums">package dev.adamko.gildedrose.item
+
+import com.gildedrose.Item
+import dev.adamko.gildedrose.item.ItemMutator.Companion.constantQualityMutator
+import dev.adamko.gildedrose.item.ItemMutator.Companion.mutatorSelector
+
+
+object ItemTemplates {
+
+  /** Decrease sellIn by `-1` */
+<span class="nc" id="L11">  val regularSellInDecrement = ItemMutator { it.copy(sellIn = it.sellIn - 1) }</span>
+
+  /** &gt; &quot;Sulfuras&quot;, being a legendary item, never has to be sold or decreases in Quality */
+<span class="nc" id="L14">  val legendaryItem = ItemTemplate(</span>
+<span class="nc" id="L15">      constantQualityMutator(80),</span>
+  )
+
+  /** Regular, non-legendary, items have a valid range of 0 to 50 (inclusive). */
+<span class="nc" id="L19">  val regularItemValidRange = 0..50</span>
+
+  /**
+   * Create a [ItemTemplate] for an [Item]. The resulting template:
+   *
+   *  - adjusts [Item.quality] using the delta from [qualityDeltaProvider]
+   *  - adjust [Item.sellIn] using [regularSellInDecrement]
+   */
+  fun qualityAdjustingItemTemplate(
+      qualityDeltaProvider: (ItemState) -&gt; Int,
+<span class="nc" id="L29">  ) = ItemTemplate(</span>
+<span class="nc" id="L30">      ItemMutator.QualityMutator(regularItemValidRange, qualityDeltaProvider),</span>
+<span class="nc" id="L31">      regularSellInDecrement,</span>
+<span class="nc" id="L32">  )</span>
+
+  /** &gt; &quot;Once the sell by date has passed, Quality degrades twice as fast&quot; */
+<span class="nc" id="L35">  val regularItem = qualityAdjustingItemTemplate { item -&gt;</span>
+<span class="nc" id="L36">    when {</span>
+<span class="nc bnc" id="L37" title="All 2 branches missed.">      item.isExpired -&gt; -2</span>
+<span class="nc" id="L38">      else           -&gt; -1</span>
+    }
+  }
+
+  /** &gt; &quot;Aged Brie&quot; actually increases in Quality the older it gets */
+<span class="nc" id="L43">  val agedItem = qualityAdjustingItemTemplate { item -&gt;</span>
+<span class="nc" id="L44">    when {</span>
+<span class="nc bnc" id="L45" title="All 2 branches missed.">      item.isExpired -&gt; 2</span>
+<span class="nc" id="L46">      else           -&gt; 1</span>
+    }
+  }
+
+  /** &gt; &quot;Conjured&quot; items degrade in Quality twice as fast as normal items */
+<span class="nc" id="L51">  val conjuredItem = qualityAdjustingItemTemplate { item -&gt;</span>
+<span class="nc" id="L52">    when {</span>
+<span class="nc bnc" id="L53" title="All 2 branches missed.">      item.isExpired -&gt; -4</span>
+<span class="nc" id="L54">      else           -&gt; -2</span>
+    }
+  }
+
+  /**
+   * &gt; &quot;Backstage passes&quot;, like aged brie, increases in Quality as its SellIn value approaches;
+   * &gt;
+   * &gt; Quality
+   * &gt; * increases by 2 when there are 10 days or less
+   * &gt; * and by 3 when there are 5 days or less
+   * &gt; * but drops to 0 after the concert
+   *
+   * Uses a [mutatorSelector] to set quality to 0 if the item is expired, else it will mutate
+   * using a [ItemMutator.QualityMutator].
+   */
+<span class="nc" id="L69">  val ticketItem = run {</span>
+
+<span class="nc" id="L71">    val expiredMutator = constantQualityMutator(0)</span>
+
+<span class="nc" id="L73">    val nonExpiredMutator = ItemMutator.QualityMutator(regularItemValidRange) { item -&gt;</span>
+<span class="nc bnc" id="L74" title="All 4 branches missed.">      require(!item.isExpired) { &quot;expired tickets should be handled by 'expiredMutator'&quot; }</span>
+<span class="nc" id="L75">      when {</span>
+        // &quot;increases by 3 when there are 5 days or less&quot;
+<span class="nc bnc" id="L77" title="All 2 branches missed.">        item.sellIn &lt;= 5  -&gt; 3</span>
+        // &quot;increases by 2 when there are 10 days or less&quot;
+<span class="nc bnc" id="L79" title="All 2 branches missed.">        item.sellIn &lt;= 10 -&gt; 2</span>
+        // &quot;increases in Quality as its SellIn approaches&quot;
+<span class="nc" id="L81">        else              -&gt; 1</span>
+      }
+    }
+
+    // select the expired/non-expired mutator based on Item expiration
+<span class="nc" id="L86">    val ticketMutator = mutatorSelector { item -&gt;</span>
+<span class="nc" id="L87">      when {</span>
+<span class="nc bnc" id="L88" title="All 2 branches missed.">        item.isExpired -&gt; expiredMutator</span>
+<span class="nc" id="L89">        else           -&gt; nonExpiredMutator</span>
+      }
+    }
+
+    // combine the quality mutator with a regular sellIn decrement
+<span class="nc" id="L94">    ItemTemplate(ticketMutator + regularSellInDecrement)</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GildedRose.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">gilded-rose</a> &gt; <a href="index.source.html" class="el_package">com.gildedrose.java</a> &gt; <span class="el_source">GildedRose.java</span></div><h1>GildedRose.java</h1><pre class="source lang-java linenums">package com.gildedrose.java;
+
+import dev.adamko.gildedrose.java.item.ItemState;
+import dev.adamko.gildedrose.java.item.ItemTemplateProvider;
+import java.util.Arrays;
+
+public class GildedRose {
+
+  Item[] items;
+  private final ItemTemplateProvider itemTemplateProvider;
+
+  public GildedRose(
+      Item[] items,
+      ItemTemplateProvider itemTemplateProvider
+<span class="fc" id="L15">  ) {</span>
+<span class="fc" id="L16">    this.items = items;</span>
+<span class="fc" id="L17">    this.itemTemplateProvider = itemTemplateProvider;</span>
+<span class="fc" id="L18">  }</span>
+
+  public GildedRose(Item[] items) {
+<span class="fc" id="L21">    this(items, ItemTemplateProvider.defaultTemplateProvider);</span>
+<span class="fc" id="L22">  }</span>
+
+  public void updateQuality() {
+<span class="fc" id="L25">    Arrays.stream(items).forEach(item -&gt; {</span>
+<span class="fc" id="L26">      ItemState state = new ItemState(item);</span>
+<span class="fc" id="L27">      var update = getUpdatedItem(state);</span>
+<span class="fc" id="L28">      applyUpdate(item, update);</span>
+<span class="fc" id="L29">    });</span>
+<span class="fc" id="L30">  }</span>
+
+  private static void applyUpdate(Item item, ItemState update) {
+<span class="fc" id="L33">    item.name = update.name();</span>
+<span class="fc" id="L34">    item.sellIn = update.sellIn();</span>
+<span class="fc" id="L35">    item.quality = update.quality();</span>
+<span class="fc" id="L36">  }</span>
+
+  private ItemState getUpdatedItem(ItemState item) {
+<span class="fc" id="L39">    var template = itemTemplateProvider.getTemplate(item);</span>
+<span class="fc" id="L40">    return template.applyMutation(item);</span>
+  }
+
+//  public void updateQuality() {
+//    for (int i = 0; i &lt; items.length; i++) {
+//      if (!items[i].name.equals(&quot;Aged Brie&quot;)
+//          &amp;&amp; !items[i].name.equals(&quot;Backstage passes to a TAFKAL80ETC concert&quot;)) {
+//        if (items[i].quality &gt; 0) {
+//          if (!items[i].name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {
+//            items[i].quality = items[i].quality - 1;
+//          }
+//        }
+//      } else {
+//        if (items[i].quality &lt; 50) {
+//          items[i].quality = items[i].quality + 1;
+//
+//          if (items[i].name.equals(&quot;Backstage passes to a TAFKAL80ETC concert&quot;)) {
+//            if (items[i].sellIn &lt; 11) {
+//              if (items[i].quality &lt; 50) {
+//                items[i].quality = items[i].quality + 1;
+//              }
+//            }
+//
+//            if (items[i].sellIn &lt; 6) {
+//              if (items[i].quality &lt; 50) {
+//                items[i].quality = items[i].quality + 1;
+//              }
+//            }
+//          }
+//        }
+//      }
+//
+//      if (!items[i].name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {
+//        items[i].sellIn = items[i].sellIn - 1;
+//      }
+//
+//      if (items[i].sellIn &lt; 0) {
+//        if (!items[i].name.equals(&quot;Aged Brie&quot;)) {
+//          if (!items[i].name.equals(&quot;Backstage passes to a TAFKAL80ETC concert&quot;)) {
+//            if (items[i].quality &gt; 0) {
+//              if (!items[i].name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {
+//                items[i].quality = items[i].quality - 1;
+//              }
+//            }
+//          } else {
+//            items[i].quality = items[i].quality - items[i].quality;
+//          }
+//        } else {
+//          if (items[i].quality &lt; 50) {
+//            items[i].quality = items[i].quality + 1;
+//          }
+//        }
+//      }
+//    }
+//  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
