@@ -51,8 +51,8 @@ tasks.withType<JavaCompile>().configureEach {
 //<editor-fold desc="Test config">
 
 tasks.test {
-  useJUnitPlatform()
   systemProperty("gradle.build.dir", project.buildDir)
+  useJUnitPlatform()
   testLogging {
     events("passed", "skipped", "failed")
   }
