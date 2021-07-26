@@ -28,9 +28,11 @@ These are available in the build directory `./build/reports/`
 
 Example test reports are available:
 
-* [Unit tests](./examplereports/kotest/index.html)
-* [Jacoco](./examplereports/jacoco/test/html/index.html)
-* [PIT test](./examplereports/pitest/index.html)
+* [Unit tests](./examplereports/kt/kotest/index.html)
+* [Jacoco](./examplereports/kt/jacoco/test/html/index.html)
+* [PIT test](./examplereports/kt/pitest/index.html)
+
+jvm reports are available in [./examplereports/jvm/](./examplereports/jvm/)
 
 ### Overview
 
