@@ -125,9 +125,7 @@ Decision: I have retained this behaviour, and added a test to verify it.
 
 `updateItems` doesn't validate/force quality to be in the expected range.
 
-E.g., given a legendary item with quality 100, the output will be 100, outside the allowed valid of
-
-80.
+E.g. given a legendary item with quality 100, the output will be 100, outside the allowed quality value of 80.
 
 Decision: force quality to be inside expected range. If a legendary item of quality 100 is updated,
 then `updateQuality` will set quality to be 80.
